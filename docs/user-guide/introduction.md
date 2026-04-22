@@ -8,7 +8,7 @@ description: An overview of the akaBot RPA platform and its core capabilities.
 
 # Introduction to akaBot
 
-akaBot is an enterprise-grade Robotic Process Automation (RPA) platform developed by FPT Software. It enables organizations to automate repetitive, rule-based tasks across applications and systems — without modifying existing infrastructure.
+akaBot is an enterprise-grade Robotic Process Automation (RPA) platform developed by FPT Corporation. It enables organizations to automate repetitive, rule-based tasks across applications and systems — without modifying existing infrastructure.
 
 ## Key Components
 

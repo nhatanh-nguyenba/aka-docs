@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'akaBot Documentation',
-  tagline: 'Robotic Process Automation Platform',
+  title: 'Akabot Documentation',
+  tagline: 'Agentic Process Automation Platform',
   favicon: 'img/favicon.ico',
 
   url: 'https://docs.akabot.com:8081',
@@ -78,7 +78,7 @@ const config: Config = {
     image: 'img/akabot-social-card.png',
 
     navbar: {
-      title: 'akaBot Docs',
+      title: 'Documentation',
       logo: {
         alt: 'akaBot Logo',
         src: 'img/akabot-logo.svg',
@@ -93,12 +93,7 @@ const config: Config = {
         {
           type: 'localeDropdown',
           position: 'right',
-        },
-        {
-          href: 'https://github.com/akaBot2026/aka-docs',
-          label: 'GitHub',
-          position: 'right',
-        },
+        }
       ],
     },
 
@@ -129,7 +124,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} FPT Software. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Akabot - FPT Corporation. Built with Docusaurus.`,
     },
 
     prism: {
