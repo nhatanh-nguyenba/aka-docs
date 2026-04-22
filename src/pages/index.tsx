@@ -69,7 +69,7 @@ export default function Home(): React.ReactNode {
         </section>
 
         <section className={styles.platform}>
-          <h3 className={styles.platformTitle}>Explore the Akabot Automation Platform</h3>
+          <h3 className={styles.platformTitle}>Explore the Platform Modules</h3>
           <div className={styles.platformGrid}>
             {PRODUCTS.map((p) => (
               <Link key={p.href} to={p.href} className={styles.tile}>
