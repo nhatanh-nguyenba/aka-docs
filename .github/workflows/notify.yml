@@ -1,0 +1,18 @@
+name: Notify build repo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  dispatch:
+    name: Dispatch content-updated
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger build
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.BUILD_REPO_DISPATCH_PAT }}
+          repository: akaBot2026/aka-docs-build
+          event-type: content-updated
+          client-payload: '{"sha":"${{ github.sha }}","ref":"${{ github.ref }}"}'
