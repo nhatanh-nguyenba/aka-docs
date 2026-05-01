@@ -13,6 +13,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.BUILD_REPO_DISPATCH_PAT }}
-          repository: akaBot2026/aka-docs-build
+          repository: akabot2026/aka-docs-build
           event-type: content-updated
           client-payload: '{"sha":"${{ github.sha }}","ref":"${{ github.ref }}"}'
