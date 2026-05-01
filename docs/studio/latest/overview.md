@@ -33,4 +33,4 @@ Akabot Studio is the visual workflow designer where you build, test, and publish
 
 - [Studio tutorials](/docs/latest/studio-tutorials) — Step-by-step guides for common automation scenarios.
 - [Activities reference](/docs/latest/activities/overview) — Full catalog of available activities.
-- [Connect to Akabot Center](/docs/latest/connect-center) — Register your workflow with the orchestrator..
+- [Connect to Akabot Center](/docs/latest/connect-center) — Register your workflow with the orchestrator.
