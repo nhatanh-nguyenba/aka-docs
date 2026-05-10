@@ -6,7 +6,7 @@ sidebar_position: 2
 description: "Release Notes activity documentation."
 displayed_sidebar: activitiesSidebar
 ---
-# [1]Release Notes
+# Release Notes
 
 ## **RCA.Activities.Mail Version 2.1.1.0**
 

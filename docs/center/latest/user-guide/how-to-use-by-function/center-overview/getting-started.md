@@ -1,8 +1,9 @@
 ---
 id: getting-started
-title: Getting Started with akaBot Center
-sidebar_label: Getting Started
+title: "Getting Started with akaBot Center"
+sidebar_label: "Getting Started with akaBot Center"
 sidebar_position: 1
+description: "Getting Started with akaBot Center documentation."
 displayed_sidebar: centerSidebar
 ---
 
@@ -18,7 +19,7 @@ After logging in, the recommended setup sequence for new deployments is to first
 - [ ] Change default password (if first login)
 - [ ] Register at least one akaBot Agent
 - [ ] Create an Agent Group or Agent Pool (optional but recommended)
-- [ ] Upload an automation Package via the Package manager
+- [ ] Upload an automation Package via the Studio
 - [ ] Create a Workflow linking the package to an agent or pool
 - [ ] Configure a Schedule or Trigger to automate execution
 - [ ] Review the Home dashboard to verify job execution

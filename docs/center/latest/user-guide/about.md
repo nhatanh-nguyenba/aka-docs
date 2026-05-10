@@ -3,6 +3,7 @@ id: about
 title: About
 sidebar_label: About
 sidebar_position: 1
+description: "About akaBot Center documentation."
 displayed_sidebar: centerSidebar
 ---
 
@@ -23,3 +24,5 @@ Beyond execution management, akaBot Center offers robust administrative capabili
 | Queue Management | Create and manage work item queues consumed by automated processes |
 | Administration | Control users, roles, organization units, licenses, and API tokens |
 | Reporting | Generate productivity and execution reports for stakeholders and audit purposes |
+
+![2024-04-17_9-32-22.png](/img/8c0985_2024-04-17_9-32-22.png)

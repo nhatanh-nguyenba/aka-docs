@@ -6,7 +6,7 @@ sidebar_position: 1
 description: "Data Service Scope activity documentation."
 displayed_sidebar: activitiesSidebar
 ---
-# [1] Data Service Scope
+#  Data Service Scope
 
 RCA.Activities.DataService.DataServiceScope
 

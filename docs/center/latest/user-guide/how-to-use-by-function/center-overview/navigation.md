@@ -1,8 +1,9 @@
 ---
 id: navigation
-title: akaBot Center Navigation
-sidebar_label: Navigation
+title: "akaBot Center - Navigation"
+sidebar_label: "akaBot Center - Navigation"
 sidebar_position: 3
+description: "akaBot Center - Navigation documentation."
 displayed_sidebar: centerSidebar
 ---
 
@@ -14,12 +15,14 @@ Breadcrumb navigation at the top of the main content area always shows where you
 
 ## Navigation Structure
 
-| Section | Sub-items | Primary Users |
-|---|---|---|
-| Home | — | All users |
-| Monitoring | Productivity, Report | Operations, Business users |
-| Automation | Task, Workflow, Schedule, Package, Trigger | Operations, IT-Dev |
-| Resources | Agent, Agent Group, Agent Pool | IT-Operations |
-| Assets | — | Operations, Developers |
-| Queue | — | Operations, Developers |
-| Administration | User Mgmt, Role Mgmt, Org Unit, Webhook, License, Token | Administrators |
+| No | Tab | Description |
+| --- | --- | --- |
+| 1 | Home | Charts and statistics for akaBot Center components |
+| 2 | Automation | Include all the components related to automating activity. |
+| 3 | Resources | Include the list of Agent (Software agent that automates rule-based processes in the same manner as humans do), group of Agent for deployment purposes. |
+| 4 | Asset | Shared variables or configurations that can be invoked in the design processes by developers and used in your processes |
+| 5 | Queue | Work queues are used to distribute work items to robot. Overview of queues and transactions statuses, and SLA predictions. |
+| 6 | Monitoring | Place to control and track Agent's activities and view some reports. |
+| 13 | Administration | *User Management* Role Management: Authorization based on access rights mapping *License: Activate, renew, remove, and allocate licenses and view historical licensing data.* Webhook: allow external systems to subscribe and listen to Akabot Center |
+
+![image-20221027172247-1.png](..//img/ec2673_image-20221027172247-1.png)
