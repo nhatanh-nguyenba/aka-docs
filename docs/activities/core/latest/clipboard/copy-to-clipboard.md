@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-to-clipboard
 title: "Copy To Clipboard"
 sidebar_label: "Copy To Clipboard"
@@ -23,7 +23,7 @@ This activity allows you to copy data to clipboard and stored for other use
 
 **Input**
 
-- **Text (InArgument<String>)** - Text to be copied to Clipboard
+- **Text (InArgument&lt;String&gt;)** - Text to be copied to Clipboard
 - **Text Format (TextDataFormat)** - The format of the text you want to copy. Support format are: Text, UnicodeText, Rtf, Html, CommaSepreatedValue, Xaml
 
 **Misc**
