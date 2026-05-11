@@ -1,4 +1,4 @@
-﻿---
+---
 id: if
 title: "If"
 sidebar_label: "If"
