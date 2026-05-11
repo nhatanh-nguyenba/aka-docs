@@ -1,4 +1,4 @@
-﻿---
+---
 id: http-client-with-body-factory
 title: "HTTP Client with Body Factory"
 sidebar_label: "HTTP Client with Body Factory"
