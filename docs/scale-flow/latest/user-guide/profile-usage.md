@@ -30,7 +30,7 @@ In the **Profile** area, you can:
    - Contact information
    - Account details
 
-![Profile page overview](/static/img/profile.png)
+![Profile page overview](/img/profile.png)
 
 ## Update your basic information
 

@@ -47,7 +47,7 @@ If a button is missing, contact your workspace admin to update your permissions.
    - Created At
    - Actions
 
-   ![User management list page](/static/img/list-user.png)
+   ![User management list page](/img/list-user.png)
 
 ## Find users quickly
 
@@ -69,7 +69,7 @@ The table uses pagination. You can change page and page size from the table cont
    - Typing a space
    - Pasting multiple emails at once
 
-   ![Invite team users dialog](/static/img/invite-team-user.png)
+   ![Invite team users dialog](/img/invite-team-user.png)
 
 4. Click **Invite**.
 
@@ -87,7 +87,7 @@ Important:
    - Last Name
    - Password
 
-   ![Add User dialog](/static/img/create-user.png)
+   ![Add User dialog](/img/create-user.png)
 
 3. Click **Create User**.
 
@@ -102,7 +102,7 @@ Validation rules:
 1. In the user row, click the **Edit** icon.
 2. Update user information.
 
-![Edit user dialog](/static/img/edit-user.png)
+![Edit user dialog](/img/edit-user.png)
 
 3. Click **Save Changes**.
 
@@ -138,7 +138,7 @@ You can review:
 1. In the user row, click the **Delete** icon.
 2. Confirm in the dialog.
 
-![Delete user confirmation dialog](/static/img/delete-user.png)
+![Delete user confirmation dialog](/img/delete-user.png)
 
 3. The user is removed after successful confirmation.
 

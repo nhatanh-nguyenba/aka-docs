@@ -32,7 +32,7 @@ On the authentication page:
 3. Set your password.
 4. Submit the form to create your account.
 
-![Account registration form](/static/img/register.png)
+![Account registration form](/img/register.png)
 
 If email verification is required by your identity settings:
 

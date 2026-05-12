@@ -3,62 +3,80 @@ id: channel-integration
 title: Channel Integration
 sidebar_label: Channel Integration
 sidebar_position: 4
-description: Connect Facebook, Zalo, and additional channels to centralize customer conversations.
+description: Step-by-step guide to connect messaging channels in ScaleFlow.
 displayed_sidebar: scaleFlowSidebar
 ---
 
 # Channel Integration
 
-This guide covers how to connect external communication channels so all messages flow into one inbox.
+This guide helps you connect messaging channels to ScaleFlow so all customer messages come into one place.
 
-## Supported channel types
+## What to know before you start
 
-- Facebook Page
-- Zalo Official Account
-- Web chat widget
-- Other connector-based channels available in your deployment
+- Open **Channels** from the left sidebar menu.
+- On the Channels page, you will see the channel list on the left (Zalo, Messenger, WhatsApp, Telegram, and more).
+- A channel has a **Connect** button only when that channel type is currently supported.
+- If you cannot see **Connect / Test / Reconnect / Delete**, your account likely does not have channel management permission. Ask your admin to grant access.
 
-## Before you connect
+## Channels currently supported for connection
 
-- Ensure you have admin access to the external channel account.
-- Prepare API/app credentials where required.
-- Define channel naming conventions (for example: `vn-facebook-sales`).
+- Zalo OA
+- Messenger (Facebook)
+- WhatsApp Business API
+- Telegram
 
-## Connect Facebook
+Note: Some other channels are visible in the list but currently show **Coming Soon**.
 
-1. Open **Settings > Channels > Add Channel**.
-2. Choose **Facebook**.
-3. Sign in to Facebook and grant required permissions.
-4. Select the target page to connect.
-5. Map the channel to the correct team or queue.
-6. Send a test message and verify it appears in the inbox.
+## Standard connection flow (Zalo, Messenger, WhatsApp)
 
-## Connect Zalo
+1. Open **Channels**.
+2. Select the channel you want from the left panel.
+3. Click **Connect**.
+4. The system opens that platform's login/authorization popup.
+5. Sign in and grant the requested permissions in the popup.
+6. Return to ScaleFlow and wait for confirmation (you will see "Waiting for authorization...").
+7. Connection is successful when the account appears in **Connected accounts**.
 
-1. Open **Settings > Channels > Add Channel**.
-2. Choose **Zalo**.
-3. Enter OA credentials and required callback/webhook settings.
-4. Complete authorization and sync settings.
-5. Assign default queue and routing rules.
-6. Send a test message from Zalo to validate inbound flow.
+If the process takes too long, click **Cancel** and try again.
 
-## Configure additional channels
+![Zalo connection flow](/img/zalo.png)
 
-1. Select the connector type.
-2. Enter authentication details.
-3. Map message fields to standard inbox fields.
-4. Configure retry and error handling behavior.
-5. Save and run a channel health check.
+## Connecting Telegram (slightly different)
 
-## Post-integration checklist
+![Telegram bot token connection](/img/telegram.png)
 
-- Inbound messages arrive within expected latency.
-- Agent assignment rules trigger correctly.
-- Customer identity matching links messages to existing contacts.
-- Failed delivery and webhook errors are visible in channel logs.
+Telegram uses a **Bot Token** instead of OAuth popup authorization.
 
-## Best practices
+1. Go to **Channels** > **Telegram**.
+2. Click **Connect**.
+3. Enter your **Bot Token**.
+4. Click **Verify Token**.
+5. When bot info appears (for example `@yourbotname`), click **Connect** to finish.
 
-- Separate channels by purpose (sales, support, operations).
-- Use consistent naming to simplify reporting.
-- Revalidate channel permissions after credential changes.
+If you do not have a Bot Token yet:
+
+1. Open Telegram and search for **@BotFather**.
+2. Send `/newbot` and follow the instructions.
+3. Copy the generated token and paste it into ScaleFlow.
+
+## Managing connected accounts
+
+After connection, each account is shown in **Connected accounts**. You can:
+
+- **Test**: Check whether the channel is still reachable.
+- **Reconnect**: Re-authorize when token/permissions expire or fail.
+- **Delete**: Remove the connection from ScaleFlow (new messages from that channel will stop).
+
+You can also see the channel status on each account card (for example: `active`).
+
+## How to confirm it works
+
+1. Click **Test** on the newly connected account.
+2. Send a real test message from that channel (Zalo/Facebook/WhatsApp/Telegram).
+3. Open **Inbox** and confirm the message arrives.
+
+If the test fails:
+
+- Try **Reconnect**.
+- Check whether the source account (Facebook/Zalo/Meta/Telegram) still has valid permissions.
+- If it still fails, contact your admin or technical team to check backend integration settings.

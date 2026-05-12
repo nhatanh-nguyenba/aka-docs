@@ -9,8 +9,6 @@ displayed_sidebar: scaleFlowSidebar
 
 # Contact Management
 
-This guide explains how non-technical users can create, use, and manage contacts in ScaleFlow.
-
 ## What you can do in Contacts
 
 In the **Contacts** area, you can:
@@ -100,8 +98,6 @@ You can also:
 
 Go to **Contacts** -> **Import contacts** and follow 4 steps:
 
-![Import contacts workflow](/static/img/import-contacts.png)
-
 1. **Prepare**
    - Read the import checklist
    - Download sample CSV/XLSX if needed
@@ -137,13 +133,13 @@ Note: some contacts cannot be deleted yet if they already have conversations.
 
 Go to **Contacts** -> **Tags** to:
 
-![Tags management with type filter](/static/img/list-tags-contact.png)
+![Tags management with type filter](/img/list-tags-contact.png)
 
 - Search tags
 - Filter by tag type
 - Create new tags
 
-![Create new tag dialog](/static/img/create-tag.png)
+![Create new tag dialog](/img/create-tag.png)
 
 - Edit tag name/color
 - Delete tags

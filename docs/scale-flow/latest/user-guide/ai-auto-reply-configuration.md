@@ -1,152 +1,131 @@
 ---
 id: ai-auto-reply-configuration
-title: AI Auto-Reply Configuration
-sidebar_label: AI Auto-Reply Configuration
+title: AI Auto-Reply for Inbox
+sidebar_label: AI Auto-Reply for Inbox
 sidebar_position: 5
-description: A simple guide for non-technical users to configure AI auto-reply in Inbox Co-pilot.
+description: Practical guide to set up and use Smart Reply in Inbox based on the current UI.
 displayed_sidebar: scaleFlowSidebar
 ---
 
-# AI Auto-Reply Configuration
+# AI Auto-Reply for Inbox
 
-This guide shows how to configure AI to automatically reply to customer messages in ScaleFlow, using the current Inbox Co-pilot implementation.
+## What AI auto-reply means in the current product
 
-It is written for non-technical users. You do not need coding knowledge.
+In the current UI, Inbox auto-reply is configured at:
 
-## Understand the 3 AI features first
+- **AI > Inbox Co-pilot > Smart Reply**
 
-In **Inbox Co-pilot**, these features are different:
+When **Smart Reply** is enabled, the system suggests draft replies that agents can quickly review and send to customers.
 
-- **Smart Assistant**: can auto-handle customer conversations (this is the main auto-reply flow).
-- **Follow-up Assistant**: can auto-send a follow-up message after inactivity.
-- **Smart Reply**: only suggests a draft for human agents to review; it does not auto-send by itself.
+## Open the Smart Reply settings page
 
-If your goal is "AI should reply automatically", focus on:
+![Smart Reply card in Inbox Co-pilot](/img/smart-reply.png)
 
-1. **Smart Assistant** (main auto reply)
-2. **Follow-up Assistant** (optional re-engagement)
+1. In the left sidebar, open **AI**.
+2. Select **Inbox Co-pilot**.
+3. Click the **Smart Reply** card.
 
-## Open Inbox Co-pilot
+If you still cannot find it, use this checklist:
 
-1. In the left navigation, open **AI** -> **Inbox Co-pilot**.
-2. You will see assistant cards such as:
-   - Smart Summary
-   - Smart Reply
-   - Smart Writing
-   - Smart Assistant
-   - Follow-up Assistant
-3. Click **Smart Assistant** to configure auto-reply behavior.
+- You should be on page title **Inbox Co-pilot** first (a page with assistant cards).
+- The **Smart Reply** card has a message/reply icon and the label **Smart Reply**.
+- Clicking that card opens the edit page with action buttons **Cancel** and **Save changes** at the top-right.
 
-If you cannot open this page, ask your admin to grant inbox update permissions.
+## Configure Smart Reply
 
-## Configure Smart Assistant (main auto-reply)
+The Smart Reply page currently includes:
 
-On the **Smart Assistant** page, configure these fields:
+- **Model**: select the AI model used for reply generation.
+- **Messages used**: number of recent messages used as context.
+- **Enabled**: turn Smart Reply on or off.
+- **System Prompt / AI Instructions**: tell AI how replies should sound and behave.
 
-### 1) Agent
+After making changes:
 
-- Select the AI Agent that will reply in conversations.
-- This field is required.
+- Click **Save changes** to save.
+- Click **Cancel** to return to the assistant list.
 
-### 2) Agent version
+## Starter setup (safe and easy)
 
-- Choose a specific published version, or keep **Latest**.
-- If you keep **Latest**, the system uses the latest published version.
+### Where each setting is located on screen
 
-### 3) Runtime (when AI can run)
+After you open **AI > Inbox Co-pilot > Smart Reply**, look at the edit form:
 
-Choose one mode:
+1. **Model**
+   - Position: first row of the form, as a model selector.
+   - What to do: pick the same model your team already uses in other assistants.
+2. **Messages used**
+   - Position: first row, next to Model (number input).
+   - What to do: enter a moderate value like **8-12**.
+3. **Enabled**
+   - Position: first row, shown as a toggle switch with status text.
+   - What to do: switch it to **Enabled**.
+4. **System Prompt / AI Instructions**
+   - Position: large text editor area below the first row.
+   - What to do: paste short instructions for reply style and behavior.
+5. **Save changes**
+   - Position: top-right corner of the page.
+   - What to do: click it after editing; wait for success message.
 
-- **Always**: AI can run any time.
-- **Outside working hours**: default schedule is `17:00` to `08:00`.
-- **Custom**: define one or more custom time ranges.
+### Recommended starting point
 
-Important:
+- Turn on **Enabled**.
+- Choose a stable **Model** already used by your team.
+- Set **Messages used** to a moderate value (for example, 8-12) so AI has enough context.
+- Use a short and clear prompt, for example:
+  - Reply briefly and politely using only information already present in the conversation.
+  - If information is missing, ask one short clarification question instead of guessing.
+  - Do not promise policies or outcomes that are not confirmed.
 
-- In **Custom**, each range must have both start and end time.
-- Overnight ranges are supported.
+### Copy-ready starter prompt
 
-### 4) Messages used
+You can paste this directly into **System Prompt / AI Instructions**:
 
-- Number of recent messages the AI reads for context.
-- Must be at least `1`.
-- Recommended start: `10` to `20` for better context.
+> Reply briefly, politely, and clearly using only information already present in this conversation.  
+> If key information is missing, ask one short clarification question instead of guessing.  
+> Do not promise policies, timelines, or outcomes that are not confirmed.
 
-### 5) Enabled
+## Use Smart Reply directly in Inbox
 
-- Turn this on to activate Smart Assistant.
-- Turn off to stop Smart Assistant from auto-handling conversations.
+![AI Smart Reply in Inbox composer](/img/ai-smart-writing.png)
 
-### 6) Contact identification (optional but useful)
+1. Open **Inbox** and select a conversation.
+2. In the composer, keep the tab on **Reply**.
+3. Click **AI Smart Reply**.
+4. AI fills the draft into the input box.
+5. Review the message and click **Send**.
 
-- **Contact identification enabled**: when enabled, AI tries to identify the customer (phone/email) before continuing.
-- **Contact identification prompt**: editable instruction for that identification behavior.
+Important notes:
 
-### 7) Save
+- In the **Internal note** tab, the AI button changes to **AI Smart Summary** (not Smart Reply).
+- If there is existing draft text and Smart Writing is enabled, you may see **AI Smart Writing** instead of **AI Smart Reply**.
 
-- Click **Save Changes**.
+## Suggested workflow for support teams
 
-Without saving, new settings are not applied.
+1. Start with one shared prompt for the whole team.
+2. Let 1-2 agents test it on real Inbox conversations.
+3. Collect feedback: too long, too robotic, or missing key details.
+4. Adjust the prompt first; only change the model if truly necessary.
+5. Roll it out to the full team after results are stable.
 
-## Configure Follow-up Assistant (optional)
+## Quick troubleshooting
 
-Use this if you want AI to send a follow-up message after no activity.
+### Cannot find Smart Reply under AI > Inbox Co-pilot
 
-1. Go back to **Inbox Co-pilot**.
-2. Open **Follow-up Assistant**.
-3. Configure:
-   - **Delay before follow-up (hours)**: from `1` to `23`.
-   - **Messages used**: number of recent messages AI reads before creating follow-up.
-   - **Model**: model used to generate follow-up text.
-   - **Enabled**: turn on/off the feature.
-   - **Action**:
-     - `Send Message` (implemented now)
-     - `Notify Admin` (placeholder, not fully implemented yet)
-   - **Follow-up instructions** (shown when action is `Send Message`)
-4. Click **Save Changes**.
+- Ask your admin to check access permissions (especially Inbox update-related permissions).
 
-## How auto-reply works in the current implementation
+### Smart Reply is visible but cannot be clicked or generates nothing
 
-This section reflects actual system behavior:
+- Verify **Enabled** is turned on.
+- Verify a **Model** is selected.
+- Try another conversation in Inbox.
 
-- Smart Assistant runs only when it has valid configuration (agent + runtime).
-- If runtime does not match current time, Smart Assistant will not auto-handle that conversation.
-- If a conversation already has assignees, Smart Assistant may skip auto-assignment.
-- If the assigned AI agent has already exited that conversation session, Smart Assistant is skipped.
-- Follow-up timer resets whenever a new outbound message appears.
-- If a customer sends a new message, scheduled follow-up is canceled.
-- Follow-up `notify` action currently logs an event and is marked pending implementation.
+### AI Smart Reply button does not appear in Inbox
 
-## Quick test checklist
+- Make sure you are on the **Reply** tab.
+- If **AI Smart Writing** appears, clear the draft or temporarily disable Smart Writing and check again.
 
-After saving, test with a real or testing conversation:
+### AI suggestions are not aligned with expectations
 
-1. Send a customer message in Inbox.
-2. Confirm conversation is eligible for Smart Assistant (time window and assignment conditions).
-3. Verify AI responds.
-4. For Follow-up:
-   - Send an outbound message.
-   - Wait your configured delay.
-   - Confirm follow-up is sent.
-   - Then test again with a customer reply before delay to confirm cancellation.
-
-## Troubleshooting
-
-If AI is not auto-replying, check in this order:
-
-1. **Enabled** is ON for Smart Assistant / Follow-up Assistant.
-2. **Agent** is selected for Smart Assistant.
-3. **Runtime** includes current time.
-4. **Save Changes** was clicked.
-5. Conversation is not already controlled by another assignment flow.
-6. For Follow-up, ensure action is `Send Message` (not `Notify Admin`).
-
-## Recommended starting setup (safe default)
-
-For first rollout:
-
-- Smart Assistant: Enabled, Runtime = Outside working hours, Messages used = 10
-- Contact identification: Enabled (use default prompt first)
-- Follow-up Assistant: Disabled initially, then enable after Smart Assistant is stable
-
-This gives a controlled rollout with low risk and easy monitoring.
+- Refine **System Prompt / AI Instructions** first.
+- Keep instructions short, explicit, and action-oriented.

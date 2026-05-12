@@ -9,8 +9,6 @@ displayed_sidebar: scaleFlowSidebar
 
 # Roles & Permissions
 
-This guide explains how non-technical users can use the **Roles & Permissions** page to control who can view and do what in the workspace.
-
 ## What you can do on this page
 
 In **Organization -> Roles & Permissions**, you can:
@@ -53,17 +51,17 @@ Important behavior in the current UI:
 
 ## Create a new role
 
-![Create role dialog](/static/img/create-role.png)
+![Create role dialog](/img/create-role.png)
 
 1. Click **Create new role**.
 2. In **Role details**:
    - Enter **Role name** (required)
    - Enter **Description** (optional)
    - Optional: choose **Copy permissions from role** to copy a permission set from another role
-3. Click **Continue**.![alt text](image.png)
+3. Click **Continue**.
 4. In **Add permissions**, select the permissions you want.
 
-![Add permissions](/static/img/list-permission.png)
+![Add permissions](/img/list-permission.png)
 
 5. Click **Create role** to finish.
 
@@ -103,7 +101,7 @@ Storage permissions stay disabled until the role has at least one permission fro
 
 ## Delete a role
 
-![Delete role dialog](/static/img/delete-role.png)
+![Delete role dialog](/img/delete-role.png)
 
 1. Open the 3-dot menu on a role card.
 2. Select **Delete**.
@@ -119,7 +117,7 @@ Creating roles and assigning roles are two separate steps:
 2. Open **Organization -> User Management**.
 3. On the target user row, click **Assign Role** (shield icon).
 
-![Assign role dialog](/static/img/assign-role.png)
+![Assign role dialog](/img/assign-role.png)
 
 4. Select one or more roles, then save.
 

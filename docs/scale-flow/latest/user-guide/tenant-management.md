@@ -9,8 +9,6 @@ displayed_sidebar: scaleFlowSidebar
 
 # Tenant Management
 
-This guide explains how non-technical users can use **Tenant Management** in ScaleFlow to review tenant details and update the company name.
-
 ## What you can do on this page
 
 In **Organization -> Tenant Management**, you can:
@@ -33,7 +31,7 @@ If you only have `tenant.view`, the page is read-only.
 
 ## Open Tenant Management
 
-![Tenant Management overview](/static/img/tenant-management-overview.png)
+![Tenant Management overview](/img/tenant-manage.png)
 
 1. In the left sidebar, open **Organization**.
 2. Select **Tenant Management**.

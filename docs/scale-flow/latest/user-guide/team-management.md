@@ -44,7 +44,7 @@ If a button is missing, contact your workspace admin to update your permissions.
    - Created date
    - Actions (if you have manage)
 
-![Team list overview](/static/img/list-team.png)
+![Team list overview](/img/list-team.png)
 
 ## Create a new team
 
@@ -55,7 +55,7 @@ If a button is missing, contact your workspace admin to update your permissions.
    - Description
    - Initial members
 
-   ![Add team dialog](/static/img/add-team.png)
+   ![Add team dialog](/img/add-team.png)
 
 4. Click **Create Team**.
 
@@ -84,7 +84,7 @@ Notes:
    - Description
    - Members
 
-   ![Edit team confirmation dialog](/static/img/edit-team.png)
+   ![Edit team confirmation dialog](/img/edit-team.png)
 
 3. Click **Save Changes**.
 
@@ -93,7 +93,7 @@ Notes:
 1. In the team row, click the **Delete** icon.
 2. Confirm the action in the dialog.
 
-![Delete team confirmation dialog](/static/img/delete-team.png)
+![Delete team confirmation dialog](/img/delete-team.png)
 
 3. The team is removed after successful confirmation.
 

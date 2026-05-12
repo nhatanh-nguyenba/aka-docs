@@ -3,13 +3,11 @@ id: integration-usage
 title: Integration Usage
 sidebar_label: Integration Usage
 sidebar_position: 13
-description: Practical guide for non-technical users to connect and manage integrations in ScaleFlow.
+description: Practical guide to connect and manage integrations in ScaleFlow.
 displayed_sidebar: scaleFlowSidebar
 ---
 
 # Integration Usage
-
-This guide helps non-technical users connect and manage integrations in ScaleFlow using the current UI.
 
 ## What this feature is for
 
@@ -25,12 +23,12 @@ There are 2 places in the left menu:
 
 - **Integrations**: browse providers and start connecting
 
-![Integration connection](/static/img/integration-connection.png)
+![Integration connection](/img/integration-connection.png)
 
 
 - **Integration Connections**: see all existing connections across providers
 
-![Integrations provider list](/static/img/list-integration.png)
+![Integrations provider list](/img/list-integration.png)
 
 ## Permissions you need
 
@@ -59,7 +57,7 @@ Other providers in the grid may show **Coming soon** and cannot be connected yet
    - **Continue on HubSpot** (HubSpot), or
    - **Continue with Google** (Google Sheets / Google Drive).
 
-   ![Connect Google Drive flow](/static/img/connect-google-drive.png)
+   ![Connect Google Drive flow](/img/connect-google-drive.png)
 
 6. Complete authorization in provider popup.
 7. Return to ScaleFlow and verify the connection appears in the provider page.
@@ -159,4 +157,4 @@ Inside one Google Drive connection:
 - Validate new connections with **Test connection** right after setup.
 - Remove unused connections to reduce confusion and permission risk.
 
-![Delete connection confirmation dialog](/static/img/delete-connection.png)
+![Delete connection confirmation dialog](/img/delete-connection.png)
