@@ -223,7 +223,7 @@ Click [here](https://ws3.fpt-software.vn/s/xXJDQEPDOkW6z7b) to download. Passw
 * [Fixed] readyState exception in browser handling.
 * [Fixed] Attach Browser performance slowdown.
 
-## Java Automation
+### Java Automation
 
 * [Added] Fix for IndexInParent selector in element detection (Java automation).
 
@@ -299,7 +299,7 @@ Click [here](https://ws3.fpt-software.vn/s/S9S2v60JjahYvVr) to download. Passwo
 
 ## v2.2.0.1
 
-## Bug fixes
+### Bug fixes
 
 * Create Folder/Rename/New/NewFromTemplate file/folder name containing voiced characters.
 * Expression Editor does not support clicking items from the suggestion list.
@@ -311,7 +311,7 @@ Click [here](https://ws3.fpt-software.vn/s/S9S2v60JjahYvVr) to download. Passwo
 * Button Start and Stop do not auto change status when ending workflow.
 * Add a limit for Exception Details on [Runtime Execution Error] Dialog (10000 chars).
 
-## Updated
+### Updated
 
 * Update Expression Editor to hide suggestion window and Tooltip when there is no result.
 * Allow to create new Variable/Argument with Unicode characters and not allow Variable/Argument name to be the same as VB type when Ctrl+K, Ctrl+M, SelectorEditor.
