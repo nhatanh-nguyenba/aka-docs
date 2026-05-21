@@ -1,9 +1,9 @@
 ---
 id: dashboard-workflows
-title: Workflows Dashboard
-sidebar_label: Workflows
+title: "Workflows Dashboard"
+sidebar_label: "Workflows"
 sidebar_position: 2
-description: Default Workflows dashboard: widgets, metrics, and descriptions.
+description: "Default Workflows dashboard: widgets, metrics, and descriptions."
 displayed_sidebar: insightSidebar
 ---
 # Workflows

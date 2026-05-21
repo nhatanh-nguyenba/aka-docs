@@ -1,9 +1,9 @@
 ---
 id: dashboard-business-roi
-title: Business Dashboard ROI
-sidebar_label: Business Dashboard
+title: "Business Dashboard ROI"
+sidebar_label: "Business Dashboard"
 sidebar_position: 4
-description: Default Business dashboard widgets, metrics, and descriptions.
+description: "Default Business dashboard widgets, metrics, and descriptions."
 displayed_sidebar: insightSidebar
 ---
 # Business

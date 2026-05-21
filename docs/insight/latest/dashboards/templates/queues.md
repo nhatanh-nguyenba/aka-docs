@@ -1,9 +1,9 @@
 ---
 id: dashboard-queues
-title: Queues Dashboard
-sidebar_label: Queues
+title: "Queues Dashboard"
+sidebar_label: "Queues"
 sidebar_position: 3
-description: Default Queues dashboard: widgets, metrics, and descriptions.
+description: "Default Queues dashboard: widgets, metrics, and descriptions."
 displayed_sidebar: insightSidebar
 ---
 
