@@ -1,9 +1,9 @@
 ---
 id: dashboard-agents
-title: Agents Dashboard
-sidebar_label: Agents
+title: "Agents Dashboard"
+sidebar_label: "Agents"
 sidebar_position: 1
-description: Default Agents dashboard: widgets, metrics, and descriptions.
+description: "Default Agents dashboard widgets, metrics, and descriptions."
 displayed_sidebar: insightSidebar
 ---
 # Agents
