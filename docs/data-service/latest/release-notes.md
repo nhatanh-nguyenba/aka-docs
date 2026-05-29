@@ -11,8 +11,6 @@ displayed_sidebar: dataServiceSidebar
 
 ## v1.1.1.2
 
-Build date: Nov 18, 2025
-
 **Added features**
 
 * Support retrieving parameters from AWS Secret Key.
@@ -20,13 +18,9 @@ Build date: Nov 18, 2025
     * Windows: win-install.bat
     * Linux: akabotdata.service
 
-Click [this link](https://ws3.fpt-software.vn/s/uzh0dvDEG3aF4Ud) to download.
-
 ---
 
 ## v1.1.1.1
-
-Build date: Dec 10, 2024
 
 **Added features**
 
@@ -34,20 +28,14 @@ Build date: Dec 10, 2024
 * Allow selecting entities for schema import/export.
 * Apply role-based access control in the Entity Manager screen.
 
-Click [this link](https://ws3.fpt-software.vn/s/E5WUUpHeJ74zPDX) to download.
-
 ---
 
 ## v1.1.1.0
-
-Build date: Nov 21, 2024
 
 **Added features**
 
 * Support display field ordering.
 * Allow creating, updating, and deleting data directly on the browser.
-
-Click [this link](https://ws3.fpt-software.vn/s/PHBqW8X15rU5exk) to download.
 
 ---
 
@@ -86,5 +74,3 @@ Click [this link](https://ws3.fpt-software.vn/s/PHBqW8X15rU5exk) to download.
 * Activities with Data
 * Advanced Filter in Data Service
 * Manage Access
-
-> **Note:** Contact our [support team](mailto:support@akabot.com) to get download password.

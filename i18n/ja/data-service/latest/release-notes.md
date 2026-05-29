@@ -52,8 +52,6 @@ displayed_sidebar: dataServiceSidebar
 * [追加] 表示フィールドの順序付けをサポートします。
 * [追加] ブラウザ上で直接データを作成、更新、削除できるようにします。
 
-リンク:[https://ws3.fpt-software.vn/s/PHBqW8X15rU5exk](https://ws3.fpt-software.vn/s/PHBqW8X15rU5exk)
-
 ---
 # v1.1.1.1
 
@@ -61,7 +59,5 @@ displayed_sidebar: dataServiceSidebar
 * [追加] エンティティ名の長さを 20 文字から 30 文字に増やします。
 * [追加] スキーマのインポート/エクスポート用のエンティティを選択できるようにします。
 * [追加] Entity Manager 画面でロールベースのアクセス制御を適用します。
-
-リンク:[https://ws3.fpt-software.vn/s/E5WUUpHeJ74zPDX](https://ws3.fpt-software.vn/s/E5WUUpHeJ74zPDX)
 
 ---
