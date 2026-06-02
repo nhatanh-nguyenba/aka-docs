@@ -11,7 +11,7 @@ displayed_sidebar: dataServiceSidebar
 
 ## v1.1.1.2
 
-**Added features**
+**Added**
 
 * Support retrieving parameters from AWS Secret Key.
 * Allow configuring access key and secret key in installation files:
@@ -19,29 +19,26 @@ displayed_sidebar: dataServiceSidebar
     * Linux: akabotdata.service
 
 ---
-
 ## v1.1.1.1
 
-**Added features**
+**Added**
 
 * Increase entity name length from 20 to 30 characters.
 * Allow selecting entities for schema import/export.
 * Apply role-based access control in the Entity Manager screen.
 
 ---
-
 ## v1.1.1.0
 
-**Added features**
+**Added**
 
 * Support display field ordering.
 * Allow creating, updating, and deleting data directly on the browser.
 
 ---
-
 ## v1.0.1.5
 
-**Added features**
+**Added**
 
 * [Export/ Import Schema] Instead of manually creating individual entities and fields, users have the option to import/export schema data in JSON format to save effort.
 * [Data deletion] Allows the deletion of one or multiple data entries on the Data Service (using advanced filters).
@@ -60,10 +57,9 @@ displayed_sidebar: dataServiceSidebar
 * Previously, there was no warning for users when they selected a field without providing a value. Currently, a warning is displayed
 
 ---
-
 ## v1.0.0
 
-**Added features**
+**Added**
 
 * Create Entity
 * Edit Entity
