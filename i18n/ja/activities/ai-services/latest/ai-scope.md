@@ -2,7 +2,7 @@
 id: ai-scope
 title: "AI Scope"
 sidebar_label: "AI Scope"
-sidebar_position: 1
+sidebar_position: 3
 description: "AI Scope activity documentation."
 displayed_sidebar: activitiesSidebar
 ---
