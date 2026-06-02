@@ -1,20 +1,20 @@
 ---
-id: generate-chat-completion-using-gemini
-title: "Generate Chat Completion Using Gemini"
-sidebar_label: "Generate Chat Completion Using Gemini"
+id: generate-text-completion-using-gemini
+title: "Generate Text Completion Using Gemini"
+sidebar_label: "Generate Text Completion Using Gemini"
 sidebar_position: 5
-description: "Generate Chat Completion Using Gemini activity documentation."
+description: "Generate Text Completion Using Gemini activity documentation."
 displayed_sidebar: activitiesSidebar
 ---
 # Gemini を使用したチャット補完の生成
 
-RCA.Activities.AIServices.GenerateChatCompletionUsingGemini
+RCA.Activities.AIServices.GenerateTextCompletionUsingGemini
 
 ## **説明**
 
-Generate Chat Completion Using Gemini アクティビティは、ユーザープロンプトと会話履歴に基づいて Google Gemini モデルを使用してチャット補完応答を生成します。このアクティビティは **Provider Type** を GoogleGemini に設定した AI Scope 内で使用する必要があります。
+Generate Text Completion Using Gemini アクティビティは、ユーザープロンプトと会話履歴に基づいて Google Gemini モデルを使用してチャット補完応答を生成します。このアクティビティは **Provider Type** を GoogleGemini に設定した AI Scope 内で使用する必要があります。
 
-![chat-ge](/static/img/chat-ge.png)
+![text-ge](/static/img/text-ge.png)
 
 （\* は必須）
 
@@ -61,4 +61,4 @@ Generate Chat Completion Using Gemini アクティビティは、ユーザープ
 
 * **Public (Checkbox)** - アクティビティを公開したい場合はチェックしてください。使用前にデータセキュリティ要件を考慮してください。
 * **Display Name (String)** - このアクティビティの名前。コードを整理・構造化するために名前を編集できます。  
-  例: Generate Chat Completion Using Gemini
+  例: Generate Text Completion Using Gemini
