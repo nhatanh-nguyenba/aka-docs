@@ -2,7 +2,7 @@
 id: generate-text-response-azure-openai
 title: "Generate Text Response Azure OpenAI"
 sidebar_label: "Generate Text Response Azure OpenAI"
-sidebar_position: 8
+sidebar_position: 2
 description: "Generate Text Response Azure OpenAI activity documentation."
 displayed_sidebar: activitiesSidebar
 ---

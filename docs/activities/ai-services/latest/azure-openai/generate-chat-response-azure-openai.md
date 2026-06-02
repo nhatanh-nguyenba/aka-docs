@@ -2,7 +2,7 @@
 id: generate-chat-response-azure-openai
 title: "Generate Chat Response Azure OpenAI"
 sidebar_label: "Generate Chat Response Azure OpenAI"
-sidebar_position: 9
+sidebar_position: 1
 description: "Generate Chat Response Azure OpenAI activity documentation."
 displayed_sidebar: activitiesSidebar
 ---

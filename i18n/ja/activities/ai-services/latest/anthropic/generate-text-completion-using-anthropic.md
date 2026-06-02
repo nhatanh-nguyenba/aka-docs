@@ -2,7 +2,7 @@
 id: generate-text-completion-using-anthropic
 title: "Generate Text Completion Using Anthropic"
 sidebar_label: "Generate Text Completion Using Anthropic"
-sidebar_position: 6
+sidebar_position: 2
 description: "Generate Text Completion Using Anthropic activity documentation."
 displayed_sidebar: activitiesSidebar
 ---

@@ -2,7 +2,7 @@
 id: generate-chat-completion-using-anthropic
 title: "Generate Chat Completion Using Anthropic"
 sidebar_label: "Generate Chat Completion Using Anthropic"
-sidebar_position: 7
+sidebar_position: 1
 description: "Generate Chat Completion Using Anthropic activity documentation."
 displayed_sidebar: activitiesSidebar
 ---

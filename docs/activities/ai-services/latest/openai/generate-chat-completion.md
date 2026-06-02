@@ -2,7 +2,7 @@
 id: generate-chat-completion
 title: "Generate Chat Completion"
 sidebar_label: "Generate Chat Completion"
-sidebar_position: 3
+sidebar_position: 1
 description: "Generate Chat Completion activity documentation."
 displayed_sidebar: activitiesSidebar
 ---

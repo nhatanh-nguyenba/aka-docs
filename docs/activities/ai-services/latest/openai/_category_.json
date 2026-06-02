@@ -1,6 +1,6 @@
 {
-  "label": "AI Service Activities",
-  "position": 14,
+  "label": "OpenAI",
+  "position": 4,
   "collapsible": true,
   "collapsed": true,
   "link": {

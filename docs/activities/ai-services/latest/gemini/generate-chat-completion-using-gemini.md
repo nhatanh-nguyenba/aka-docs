@@ -2,7 +2,7 @@
 id: generate-chat-completion-using-gemini
 title: "Generate Chat Completion Using Gemini"
 sidebar_label: "Generate Chat Completion Using Gemini"
-sidebar_position: 5
+sidebar_position: 1
 description: "Generate Chat Completion Using Gemini activity documentation."
 displayed_sidebar: activitiesSidebar
 ---

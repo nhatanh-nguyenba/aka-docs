@@ -2,7 +2,7 @@
 id: generate-text-completion-using-gemini
 title: "Generate Text Completion Using Gemini"
 sidebar_label: "Generate Text Completion Using Gemini"
-sidebar_position: 4
+sidebar_position: 2
 description: "Generate Text Completion Using Gemini activity documentation."
 displayed_sidebar: activitiesSidebar
 ---
