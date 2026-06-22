@@ -220,7 +220,7 @@ After closing the wizard, open the activity's **Properties** panel to configure 
 | Condition                                                 | Error                                                                                |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | `TargetElement` not configured                            | Required validation error                                                            |
-| `LimitExtractionTo ≠ NoLimit` but `NumberOfItems` is null | "Please specify the number of items when the extraction limit type is set to {type}" |
+| `LimitExtractionTo ≠ NoLimit` but `NumberOfItems` is null | "Please specify the number of items when the extraction limit type is set to \{type\}" |
 | `NumberOfItems ≤ 0`                                       | "Value must be greater than 0"                                                       |
 | `TimeoutMS < 3000`                                        | "TimeoutMS must be ≥ 3000"                                                           |
 | `DelayBefore < 0`                                         | "DelayBefore must be ≥ 0"                                                            |
