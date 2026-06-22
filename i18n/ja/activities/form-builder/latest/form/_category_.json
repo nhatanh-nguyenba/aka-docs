@@ -1,9 +1,10 @@
 {
-  "label": "Office 365",
-  "position": 1,
+  "label": "フォーム",
+  "position": 4,
   "collapsible": true,
   "collapsed": false,
   "link": {
     "type": "generated-index"
   }
 }
+
