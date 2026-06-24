@@ -26,6 +26,7 @@ const STATIC_DIR = path.join(REPO_ROOT, 'static');
 const DRY_RUN = process.argv.includes('--dry-run');
 
 function walk(dir, results = []) {
+  
   if (!fs.existsSync(dir)) return results;
   for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
     const full = path.join(dir, entry.name);
