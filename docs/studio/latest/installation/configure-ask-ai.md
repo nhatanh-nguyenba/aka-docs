@@ -27,7 +27,7 @@ First, determine which AI server address (URL) your Studio client is pointing to
 
 2. Search for the configuration key: **`AskAIWorkerApiUrl`** and retrieve its value (e.g., `https://akabot-chatbot-worker.buianhdat305.workers.dev`).
 
-![askAiWorkerApiUrl](/static/img/askAiWorkerApiUrl.png)
+![ask-ai-worker-api-url](/static/img/ask-ai-worker-api-url.png)
 
 3. Open **PowerShell** on the user's machine and run the following command to check if the workstation can reach the AI server address:
 
