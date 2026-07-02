@@ -1,4 +1,4 @@
----
+﻿---
 id: quit
 title: "Quit Browser"
 sidebar_label: "Quit Browser"
@@ -34,10 +34,11 @@ The Quit Browser closes the current browser. This will only close window Browser
 
 ## **Step-by-Step Usage**
 
-1. **Place the activity**: Drag the **Quit Browser** activity to the bottom of your workflow sequence, outside of the browser container (e.g. [Open Browser](/docs/activities/browser/latest/activities/open-browser.md)).
-2. **Execute flow**: When executed, this activity terminates the browser session currently managed by the active browser container context.
+1. **Place inside a browser container**: Drag the **Quit Browser** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Run the workflow**: akaBot closes the active browser window and terminates all associated browser driver processes.
+
+> For more information about browser containers and browser sessions, see **[Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md)**.
 
 ## **Troubleshooting**
 
 * **Browser not closing**: The **Quit Browser** activity only closes the browser windows opened by the current workflow execution instance. It does not terminate other unrelated browser processes running on your computer.
-

@@ -1,4 +1,4 @@
----
+﻿---
 id: wait-web-title
 title: "Wait Page Title"
 sidebar_label: "Wait Page Title"
@@ -64,14 +64,11 @@ value.
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Wait Page Title** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Choose Comparison Operator**: In the body or **Properties** panel under **Input**, select the comparison rule from the dropdown:
-   * `EQUALS`: The title must match the target value exactly.
-   * `CONTAINS`: The title must contain the target value.
-   * `MATCHES`: The title must match a regex expression.
-3. **Specify the Title Value**: In the **Title Value** field, enter the expected title string or regex pattern in quotes (e.g., `"Google Search"` or `"akaBot"`).
-4. **Map the Output (optional)**: Under **Output** -> **Result**, create a Boolean variable named `isMatched` (Ctrl+K -> type `isMatched` -> press Enter) to store the verification result.
-5. **Run the workflow**: Execute the process. akaBot will pause execution until the webpage title meets the comparison rule (or the timeout is reached).
+1. **Place inside a browser container**: Drag the **Wait Web Title** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Configure the target title**: Enter the expected title string (or a wildcard pattern) in the **Title** property of the properties panel.
+3. **Run the workflow**: akaBot pauses execution until the browser's active tab title matches the specified text.
+
+> For more information about browser containers and browser sessions, see **[Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md)**.
 
 ## **Troubleshooting**
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-text
 title: "Get Text"
 sidebar_label: "Get Text"
@@ -63,11 +63,12 @@ The Get Text activity extracts text on a webpage and saves it in a String variab
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Get Text** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Pick the target element**: Click **Pick target element** in the body of the activity, then click the text element on the web page (e.g., a label, paragraph, or span). akaBot Studio will generate the **Selector** automatically.
-3. **Create an output variable**: In the **Properties** panel under **Output**, click the **Result** field and press `Ctrl + K` to create a new String variable (e.g., `extractedText`).
-4. **Use the variable**: Connect the output variable to a **Message Box** or other downstream activity to process or display the extracted text.
-5. **Run the workflow**: Execute the process. akaBot will locate the element, extract its visible text content, and store it in the output variable.
+1. **Place inside a browser container**: Drag the **Get Text** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Select the target element**: Click **Pick target element** in the activity body and select the text element on the webpage.
+3. **Configure the output variable**: In the **Value** property, create a String variable to store the extracted text.
+4. **Run the workflow**: akaBot extracts the text from the target element and stores it in the designated variable.
+
+> For more information about selecting web elements and selectors, see **[Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)**.
 
 ## **Troubleshooting**
 
@@ -76,3 +77,7 @@ The Get Text activity extracts text on a webpage and saves it in a String variab
   * Verify that the selector is correct. If the target element contains dynamic attributes (such as changing IDs), open the Selector Editor and replace the dynamic parts with wildcard characters (* or ?).
   * Ensure the target element is visible and not hidden behind overlays or loader animations. Check the **Wait Visible** property.
 * **Extension Not Enabled**: Ensure the akaBot Web Extension is active and has permissions to run on the target website. Without it, Studio cannot highlight or interact with web elements.
+
+## **Related topics**
+
+* [Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)

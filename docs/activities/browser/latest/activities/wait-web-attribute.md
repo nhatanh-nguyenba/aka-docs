@@ -1,4 +1,4 @@
----
+﻿---
 id: wait-web-attribute
 title: "Wait Web Attribute"
 sidebar_label: "Wait Web Attribute"
@@ -65,13 +65,12 @@ The Wait Web Attribute waits for the value of a specified web attribute to be en
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Wait Web Attribute** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Pick the target element**: Click **Pick target element** in the body of the activity, then select the target element on the webpage. akaBot Studio will automatically generate a **Selector** to identify that element.
-3. **Specify Attribute Name and Target Value**: In the body or **Properties** panel under **Input**:
-   * In the **Attribute Name** field, enter the name of the HTML attribute to inspect in quotes (e.g., `"class"` or `"title"`).
-   * In the **Attribute Value** field, enter the expected value you want to wait for in quotes (e.g., `"active"` or `"loaded"`).
-4. **Configure Timeout (optional)**: Set **Timeout MS** (e.g., `15000` for 15 seconds) under the **Common** properties category.
-5. **Run the workflow**: Execute the process. akaBot will pause execution at this step until the target element's specified attribute matches the expected value (or the timeout is reached).
+1. **Place inside a browser container**: Drag the **Wait Web Attribute** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Select the target element**: Click **Pick target element** in the activity body and select the element on the webpage.
+3. **Configure the attribute conditions**: Enter the attribute name in the **Attribute Name** field and the expected value in the **Attribute Value** field in the properties panel.
+4. **Run the workflow**: akaBot pauses execution until the attribute of the target element matches the specified value.
+
+> For more information about selecting web elements and selectors, see **[Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)**.
 
 ## **Troubleshooting**
 
@@ -80,3 +79,7 @@ The Wait Web Attribute waits for the value of a specified web attribute to be en
   * Verify that the selector is correct. If the target element contains dynamic attributes (such as changing IDs), open the Selector Editor and replace the dynamic parts with wildcard characters (* or ?).
   * Ensure the target element is visible and not hidden behind overlays or loader animations. Check the **Wait Visible** property.
 * **Extension Not Enabled**: Ensure the akaBot Web Extension is active and has permissions to run on the target website. Without it, Studio cannot highlight or interact with web elements.
+
+## **Related topics**
+
+* [Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)

@@ -2,7 +2,7 @@
 id: tabs-alerts-management
 title: "JavaScript Alert Handling"
 sidebar_label: "JavaScript Alert Handling"
-sidebar_position: 2
+sidebar_position: 4
 description: "A hands-on guide demonstrating how to handle JavaScript popups/alerts on a real test website using akaBot Browser activities."
 displayed_sidebar: activitiesSidebar
 ---
@@ -33,6 +33,9 @@ You will use activities including [Open Browser](/docs/activities/browser/latest
    * Set **Browser Type** to `Chrome`.
 3. Drag a [Click](/docs/activities/browser/latest/activities/click.md) activity inside the **Do** container of **Open Browser**.
    * Click **Pick target element** and select the button labeled **Click for JS Alert** on the web page.
+
+![js-alerts](/static/img/js-alerts.png)
+
 4. Drag a [Handle Alert](/docs/activities/browser/latest/activities/handle-alert.md) activity immediately below the **Click** activity.
    * Select `ACCEPT` from the **Handle Option** dropdown list in the activity block or in the **Properties** panel.
 5. Drag a [Get Text](/docs/activities/browser/latest/activities/get-text.md) activity below **Handle Alert**.
@@ -40,3 +43,5 @@ You will use activities including [Open Browser](/docs/activities/browser/latest
    * Save the result to a variable `alertResult` (using `Ctrl + K` in the **Result** field).
 6. Place a **Message Box** activity below the **Get Text** activity to display the content of the `alertResult` variable.
 7. Run the process to verify that the robot successfully clicks the button, clicks **OK** on the popup, extracts the result text, and shows it.
+
+![tabs-alerts.png](/static/img/tabs-alerts.png)

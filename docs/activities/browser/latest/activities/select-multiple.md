@@ -1,4 +1,4 @@
----
+﻿---
 id: select-multiple
 title: "Select Multiple Items"
 sidebar_label: "Select Multiple Items"
@@ -68,14 +68,12 @@ The Select Multiple Items activity allows you to select many items from a combo 
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Select Multiple Items** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Pick the target element**: Click **Pick target element** in the body of the activity, then select the target multi-select dropdown/list box on the webpage. akaBot Studio will automatically generate a **Selector** to identify that element.
-3. **Choose Select Type**: In the body or **Properties** panel under **Input**, select the type of lookup from the **Select Type** dropdown:
-   * `INDEX`: To select the options by their numeric index (starting from `0`).
-   * `VALUE`: To select the options by their HTML `value` attributes.
-   * `TEXT`: To select the options by their visible display text.
-4. **Enter Select Value**: Under **Select Value**, enter the array of target options. The values must be wrapped in curly braces and separated by commas (e.g., `{"Option1", "Option2"}`).
-5. **Run the workflow**: Execute the process. akaBot will locate the multi-select box and select all specified items.
+1. **Place inside a browser container**: Drag the **Select Multiple Items** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Select the target element**: Click **Pick target element** in the activity body and select the multi-select dropdown menu on the webpage.
+3. **Configure the items to select**: Pass an array of strings containing the items to select into the **Multiple Items** property.
+4. **Run the workflow**: akaBot locates the dropdown and selects the specified items.
+
+> For more information about selecting web elements and selectors, see **[Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)**.
 
 ## **Troubleshooting**
 
@@ -84,3 +82,4 @@ The Select Multiple Items activity allows you to select many items from a combo 
   * Verify that the selector is correct. If the target element contains dynamic attributes (such as changing IDs), open the Selector Editor and replace the dynamic parts with wildcard characters (* or ?).
   * Ensure the target element is visible and not hidden behind overlays or loader animations. Check the **Wait Visible** property.
 * **Extension Not Enabled**: Ensure the akaBot Web Extension is active and has permissions to run on the target website. Without it, Studio cannot highlight or interact with web elements.
+

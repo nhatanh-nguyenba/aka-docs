@@ -1,4 +1,4 @@
----
+﻿---
 id: close-tab
 title: "Close tab"
 sidebar_label: "Close tab"
@@ -41,12 +41,16 @@ The **Close Tab** activity closes the currently opened tab in the browser or a s
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Close Tab** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Specify the Browser variable (optional)**: In the **Properties** panel under **Input** -> **Browser**, you can specify a browser session variable (e.g. `myBrowser`) to close that specific tab. If left blank, the activity will close the active tab of the current browser container.
-3. **Configure Delay (optional)**: Set **Delay Before** or **Delay After** in the properties panel if you want to pause before or after closing the tab.
-4. **Run the workflow**: Execute the process. akaBot will close the specified tab (or the active tab of the current browser container).
+1. **Place inside a browser container**: Drag the **Close Tab** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Run the workflow**: akaBot closes the active tab in the current browser container context.
+
+> For more information about browser containers and browser sessions, see **[Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md)**.
 
 ## **Troubleshooting**
 
 * **Invalid Browser Session**: If the activity throws an error or fails to execute, ensure that it is running inside an active [Open Browser](/docs/activities/browser/latest/activities/open-browser.md) or [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md) container, or that the **Browser** variable passed into the Input property is valid and represents an open tab.
 * **WebDriver Communication Failure**: If the browser driver (e.g. ChromeDriver) has crashed or disconnected, restart your browser session and check if the driver version matches your browser (see the [Environment Setup Guide](/docs/activities/browser/latest/setup-browser-environment.md)).
+
+## **Related topics**
+
+* [Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md)

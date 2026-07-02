@@ -6,6 +6,7 @@ sidebar_position: 33
 description: "Handle Alert activity documentation."
 displayed_sidebar: activitiesSidebar
 ---
+
 # Handle Alert
 
 RCA.Activities.Browser.HandleAlert
@@ -60,15 +61,15 @@ The Handle Alert activity allows you to handle alert popup box in various ways.
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Handle Alert** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Trigger the alert**: Place a [Click](/docs/activities/browser/latest/activities/click.md) activity before **Handle Alert** to trigger the JavaScript popup on the web page.
-3. **Select Handle Option**: In the body of the activity or in the **Properties** panel, select the desired option from the **Handle Option** dropdown:
-   - `ACCEPT` – Clicks **OK** to confirm and dismiss the alert.
-   - `DISMISS` – Clicks **Cancel** to close the alert without accepting.
-   - `GETTEXT` – Retrieves the text message displayed in the alert box.
-   - `SENDKEYS` – Types a string into the alert input box (for `prompt()` alerts). Enter the text in the **KeysToSend** field.
-4. **Capture alert text (optional)**: If using `GETTEXT`, create a String variable in the **Alert Text** output field (press `Ctrl + K`) to store the returned message.
-5. **Run the workflow**: Execute the process. akaBot will automatically detect and handle the alert popup without it blocking the automation.
+1. Place the **Handle Alert** activity inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
+
+2. Configure the alert action (for example, **ACCEPT** or **DISMISS**).
+
+3. (Optional) Configure an output variable in the **Alert Text** property to capture the text message from the alert.
+
+4. Run the workflow. akaBot waits for the browser alert and performs the configured action.
+
+> For a complete example of handling JavaScript alerts, see **[JavaScript Alert Handling](/docs/activities/browser/latest/user-guide/tabs-alerts-management.md)**.
 
 ## **Troubleshooting**
 

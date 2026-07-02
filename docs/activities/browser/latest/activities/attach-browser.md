@@ -1,4 +1,4 @@
----
+﻿---
 id: attach-browser
 title: "Attach Browser"
 sidebar_label: "Attach Browser"
@@ -12,7 +12,7 @@ RCA.Activities.Browser.AttachBrowser
 
 ## **Description**
 
-A container that enables you to attach to an already opened native browser and perform multiple actions within it.
+The **Attach Browser** activity is a container activity that attaches to an existing Chrome browser session and executes Browser activities within that session.
 
 ![Browser_AttachBrowser](/static/img/b5a5f0_a15035e-screenshot_2021-05-25_154745.jpg)
 
@@ -49,22 +49,20 @@ A container that enables you to attach to an already opened native browser and p
 
 ## **Step-by-Step Usage**
 
-1. **Obtain an open browser session**:
-   * **Method A**: Use the [Open Browser](/docs/activities/browser/latest/activities/open-browser.md) activity and assign its output to a `Browser` variable (e.g., `myBrowser`).
-   * **Method B**: Launch the browser in debugging mode using the [Start Browser For Attach](/docs/activities/browser/latest/activities/start-browser-for-attach.md) activity.
-2. **Add the Attach Browser activity**: Drag and drop the **Attach Browser** activity into your workflow.
-3. **Configure connection method**: In the **Properties** panel under **Input**:
-   * If using **Method A**: Assign your variable `myBrowser` to the **Browser** property.
-   * If using **Method B**: Leave the **Browser** field empty and configure the **Selector** property to target the active window/tab.
-4. **Choose Browser Type**: Set the **Browser Type** (e.g., `Chrome`) matching your target browser.
-5. **Place activities inside the container**: Inside the **Do** container block, drag browser activities (like [Click](/docs/activities/browser/latest/activities/click.md) or [Type Into](/docs/activities/browser/latest/activities/type-into.md)) to execute actions within this attached session.
-6. **Assign output variable (optional)**: In the **Output Browser** property, create a new browser variable to pass this session to subsequent container activities.
+1. **Add the Attach Browser activity**: Drag and drop the **Attach Browser** activity into your workflow (typically below [Start Browser For Attach](/docs/activities/browser/latest/activities/start-browser-for-attach.md)).
+2. **Configure the connection**: Select the browser type and specify the selector or browser session. For details, see [Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md).
+3. **Add nested activities**: Place the browser activities you want to execute inside the **Do** container.
+4. **Run the workflow**: akaBot attaches to the target session and executes the nested activities.
+
+![attach-browser](/static/img/attach-browser.png)
 
 ## **Troubleshooting**
 
-* **Target Window Not Found**: 
-  * If attaching using a **Selector**, ensure the target browser window/tab is open and visible. If the tab has a dynamic title, edit the Selector to use wildcards (`*` or `?`).
-  * If attaching using a debugging port, ensure the browser was launched correctly with remote debugging enabled.
-* **Invalid Browser Session**: If using a **Browser** variable, ensure that the variable is initialized and that the browser window has not been closed prior to reaching this activity.
-* **WebDriver Communication Failure**: If the browser driver (e.g. ChromeDriver) has crashed or disconnected, restart your browser session and check if the driver version matches your browser (see the [Environment Setup Guide](/docs/activities/browser/latest/setup-browser-environment.md)).
+* **Browser not attached**: Ensure that [Start Browser For Attach](/docs/activities/browser/latest/activities/start-browser-for-attach.md) runs successfully before **Attach Browser**.
+* **Cannot find element**: Verify that the target element is available on the current page and reselect it using **Pick target element** if necessary.
+* **Browser actions not executed**: Confirm that all Browser activities (such as [Navigate To](/docs/activities/browser/latest/activities/navigate-to.md), [Type Into](/docs/activities/browser/latest/activities/type-into.md), and [Send Hot Keys](/docs/activities/browser/latest/activities/send-hot-keys.md)) are placed inside the **Do** container of **Attach Browser**.
+* **Timeout or WebDriver errors**: Close any existing Chrome instances started by previous debugging sessions and run the workflow again.
 
+## **Related topics**
+
+* [Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md)

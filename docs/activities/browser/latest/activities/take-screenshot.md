@@ -1,4 +1,4 @@
----
+﻿---
 id: take-screenshot
 title: "Take Screenshot"
 sidebar_label: "Take Screenshot"
@@ -63,11 +63,9 @@ The Take Screenshot takes screenshot of a UI Elements within a browser.
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Take Screenshot** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Pick the target element**: Click **Pick target element** in the body of the activity, then select the target element or area on the webpage to capture. akaBot Studio will automatically generate a **Selector** to identify that element.
-3. **Map the Output**: In the **Properties** panel under **Output** -> **Output Screenshot**, press **Ctrl + K** to create a new Image variable (e.g., `webScreenshot`) to save the captured image.
-4. **Save the image to a file**: Below the **Take Screenshot** activity, you can add a **Save Image** activity (from the Image activities package) and set the input image to `webScreenshot` and the file path to `"C:\\RPA\\Screenshots\\screenshot.png"`.
-5. **Run the workflow**: Execute the process. akaBot will capture the specified element's screenshot and save it to the designated image variable.
+1. **Place inside a browser container**: Drag the **Take Screenshot** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Configure target file**: In the **Path** property, type the folder path and filename (e.g., `"C:\Screenshots\page.png"`) where the image should be saved.
+3. **Run the workflow**: akaBot captures a screenshot of the active browser screen and saves it as an image file.
 
 ## **Troubleshooting**
 

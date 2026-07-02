@@ -1,4 +1,4 @@
----
+﻿---
 id: refresh
 title: "Refresh"
 sidebar_label: "Refresh"
@@ -34,11 +34,16 @@ The Refresh reloads the tab that is currently displayed in a browser.
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Refresh** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Configure properties (optional)**: Modify the **Display Name** or set **Continue On Error** in the Properties panel if needed.
-3. **Run the workflow**: Execute the process. When the activity is executed, akaBot will reload/refresh the active page in the browser session.
+1. **Place inside a browser container**: Drag the **Refresh** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Run the workflow**: akaBot reloads the current webpage in the active browser session.
+
+![test-refresh](/static/img/test-refresh.png)
 
 ## **Troubleshooting**
 
 * **Invalid Browser Session**: If the activity throws an error or fails to execute, ensure that it is running inside an active [Open Browser](/docs/activities/browser/latest/activities/open-browser.md) or [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md) container, and that the browser tab has not been closed.
 * **WebDriver Communication Failure**: If the browser driver (e.g. ChromeDriver) has crashed or disconnected, restart your browser session and check if the driver version matches your browser (see the [Environment Setup Guide](/docs/activities/browser/latest/setup-browser-environment.md)).
+
+## **Related topics**
+
+* [Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md)
