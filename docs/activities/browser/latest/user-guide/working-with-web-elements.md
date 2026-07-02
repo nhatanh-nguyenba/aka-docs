@@ -57,7 +57,7 @@ If a webpage layout changes, or if you accidentally selected the wrong element:
 
 When you pick a target element, akaBot Studio automatically generates a selector. You can review and modify the selector in the Selector Editor.
 
-### Attribute checklist:
+### The Selector Editor contains:
 * **Attribute checklist**: Checkboxes for attributes belonging to the selected element (e.g., `id`, `class`, `aaname`, `tag`).
 * **Selector XML query**: The resulting query used to search for the element at runtime.
 
