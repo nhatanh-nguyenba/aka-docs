@@ -1,6 +1,6 @@
 ---
 id: shopify-integration
-title: "Shopify Integration"
+title: "Shopify"
 sidebar_label: "Shopify"
 sidebar_position: 6
 description: "Guide to connect your Shopify store to ScaleFlow using Client ID, Client Secret, and Store URL."
@@ -33,7 +33,9 @@ Your Shopify Store URL is the primary `.myshopify.com` domain for your store.
 
 1. Access [https://admin.shopify.com/](https://admin.shopify.com/) and log in to your store.
 2. In the left navigation bar, click on **Settings** at the bottom.
+2. In the left navigation bar, click on **Settings** at the bottom.
 
+   ![Shopify Sidebar Settings](/static/img/image_shopify_7.png)
    ![Shopify Sidebar Settings](/static/img/image_shopify_7.png)
 
 3. In the Settings page (or from the store switcher dropdown), find the `.myshopify.com` domain of your store.
@@ -44,11 +46,14 @@ Your Shopify Store URL is the primary `.myshopify.com` domain for your store.
    > **Note:** Only enter the domain part (e.g., `your-store-name.myshopify.com`) in the Store URL field in ScaleFlow. Do not include `https://` or trailing slashes.
 
 ### Step 2: Configure App Settings (Scopes and Redirect URLs)
+### Step 2: Configure App Settings (Scopes and Redirect URLs)
 
+1. Access [https://partners.shopify.com/](https://partners.shopify.com/) and log in to your Shopify Partners account. In the left navigation menu, click on **Apps** to open your developer dashboard.
 1. Access [https://partners.shopify.com/](https://partners.shopify.com/) and log in to your Shopify Partners account. In the left navigation menu, click on **Apps** to open your developer dashboard.
 
    ![Shopify Partners Apps Menu](/static/img/image_shopify_3.jpg)
 
+2. On the Apps page, click **Create app**. Enter the **App name** (e.g., `ScaleFlow Integration`) and click **Create** to confirm.
 2. On the Apps page, click **Create app**. Enter the **App name** (e.g., `ScaleFlow Integration`) and click **Create** to confirm.
 
    ![Shopify Create App](/static/img/image_shopify_4.jpg)
@@ -72,14 +77,18 @@ Your Shopify Store URL is the primary `.myshopify.com` domain for your store.
    ![Shopify Customer Data Selection](/static/img/image_shopify_11.png)
    ![Shopify Customer Data Selection](/static/img/image_shopify_12.png)
 
-7. In the left navigation menu of your app, click on the **Configuration** tab (or **App configuration**).
+7. In the left navigation menu of your app, click on **Versions** (or select your draft version).
+
+   ![Shopify App Versions](/static/img/image_shopify_19.png)
+
+8. On the version configuration page:
    - Under the **Access** section:
      - Check/tick the **Use legacy install flow** checkbox.
      - Leave the **Scopes** and **Optional scopes** fields blank (no need to enter scopes here).
-   - Under the **App URL** section:
-     - Enter your **App URL**.
-     - In the **Allowed redirection URL(s)** field, enter the redirect URL provided by ScaleFlow (e.g., `https://your-scaleflow-domain.com/api/v1/integrations/shopify/callback`).
-8. Click **Release** (or **Save configuration**) to apply changes.
+     - In the **Redirect URLs** field, enter the redirect URL provided by ScaleFlow (e.g., `https://your-scaleflow-domain.com/integration/api/shopify/oauth/callback` or `https://your-scaleflow-domain.com/api/v1/integrations/shopify/callback`).
+   - Under the **URLs** section:
+     - Enter your **App URL** (e.g., `https://your-scaleflow-domain.com`).
+9. Click **Release** (or **Save configuration**) to apply changes.
 
    ![Shopify App Configuration](/static/img/image_shopify_15.png)
 
@@ -108,7 +117,9 @@ Once you have gathered the three required parameters (Store URL, Client ID, Clie
 - **Store URL (String)**\*: The primary domain of your Shopify store (retrieved in Step 1).  
   Example: `"your-store-name.myshopify.com"`
 - **Client ID (String)**\*: The Client ID from your Shopify Partners App Settings (retrieved in Step 3).  
+- **Client ID (String)**\*: The Client ID from your Shopify Partners App Settings (retrieved in Step 3).  
   Example: `"your_shopify_client_id"`
+- **Client Secret (String)**\*: The Client Secret from your Shopify Partners App Settings (retrieved in Step 3).  
 - **Client Secret (String)**\*: The Client Secret from your Shopify Partners App Settings (retrieved in Step 3).  
   Example: `"your_shopify_client_secret"`
 
@@ -128,7 +139,7 @@ Once you have gathered the three required parameters (Store URL, Client ID, Clie
 
 - Check that your Redirect URLs in Shopify Partners match ScaleFlow's callback URL exactly.
 - Verify that you copied the **Client ID** and **Client Secret** correctly from the App Settings page in Shopify Partners.
-- **Check if you have ticked the "Use legacy install flow" checkbox**: Go to the **Configuration** tab, scroll to the **Access** section, and verify that the **Use legacy install flow** checkbox is checked (Step 2, sub-step 7). If this option is not checked, the installation redirect will fail.
+- **Check if you have ticked the "Use legacy install flow" checkbox**: Go to the **Versions** tab, scroll to the **Access** section, and verify that the **Use legacy install flow** checkbox is checked (Step 2, sub-step 8). If this option is not checked, the installation redirect will fail.
 
 ### Error: Data Synchronization Failures (Missing Customer or Order Details)
 
