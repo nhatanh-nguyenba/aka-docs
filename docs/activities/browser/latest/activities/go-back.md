@@ -1,4 +1,4 @@
----
+﻿---
 id: go-back
 title: "Go Back"
 sidebar_label: "Go Back"
@@ -42,14 +42,21 @@ The Go Back activity goes back one URL in the history list of the current browse
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Go Back** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Configure properties (optional)**:
-   * Modify the **Display Name**, **Delay Before**, or **Delay After** in the Properties panel if needed.
-   * If you want to use a specific browser session stored in a variable rather than the parent container's context, assign it to the **Browser** property.
-3. **Run the workflow**: Execute the process. When the activity is executed, akaBot will navigate the active browser window back to the previous page in its history.
+1. **Place inside a browser container**: Drag the **Go Back** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Run the workflow**: akaBot navigates the active browser window back to the previous webpage in its history.
+
+**NOTE**
+
+* The **Go Back** activity only works if the browser has previously navigated to another webpage during the current browser session.
+
+![go-back](/static/img/go-back.png)
 
 ## **Troubleshooting**
 
 * **Invalid Browser Session**: If the activity throws an error or fails to execute, ensure that it is running inside an active [Open Browser](/docs/activities/browser/latest/activities/open-browser.md) or [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md) container, or that a valid browser session variable is provided in the **Browser** property.
 * **No Previous Page in History**: If there is no previous page in the browser session's history (e.g. if the browser was just opened and no navigation occurred), the activity will not perform any navigation action.
 * **WebDriver Communication Failure**: If the browser driver (e.g. ChromeDriver) has crashed or disconnected, restart your browser session and check if the driver version matches your browser (see the [Environment Setup Guide](/docs/activities/browser/latest/setup-browser-environment.md)).
+
+## **Related topics**
+
+* [Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md)

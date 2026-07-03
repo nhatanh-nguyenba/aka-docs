@@ -1,4 +1,4 @@
----
+﻿---
 id: switch-to
 title: "Switch To"
 sidebar_label: "Switch To"
@@ -62,12 +62,17 @@ The Switch To activity allows you to switch between different UI Elements within
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Switch To** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Choose Switch To Type**: In the body or **Properties** panel under **Input**, select the type of element or window you want to switch focus to (e.g., `FRAME` for an iframe, `WINDOW` for switching tabs, or `ALERT` for handling popup alerts).
-3. **Specify the Value**: In the **Switch To Value** field, enter the identifier or index of the target frame or window in quotes (e.g., `"1"` for the second tab, or the iframe's ID/name). If switching to `DEFAULT_CONTENT` or `ACTIVE_ELEMENT`, you can leave this field blank.
-4. **Run the workflow**: Execute the process. akaBot will switch its execution focus to the specified context (such as inside the target iframe) so subsequent activities can interact with elements within that scope.
+1. **Place inside a browser container**: Drag the **Switch To** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Configure target tab**: Select the **Index** or **Title** of the browser tab you want to switch to in the properties panel.
+3. **Run the workflow**: akaBot switches active focus to the specified tab.
+
+> For more information about browser containers and browser sessions, see **[Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md)**.
 
 ## **Troubleshooting**
 
 * **Invalid Browser Session**: If the activity throws an error or fails to execute, ensure that it is running inside an active [Open Browser](/docs/activities/browser/latest/activities/open-browser.md) or [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md) container, and that the browser tab has not been closed.
 * **WebDriver Communication Failure**: If the browser driver (e.g. ChromeDriver) has crashed or disconnected, restart your browser session and check if the driver version matches your browser (see the [Environment Setup Guide](/docs/activities/browser/latest/setup-browser-environment.md)).
+
+## **Related topics**
+
+* [Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md)

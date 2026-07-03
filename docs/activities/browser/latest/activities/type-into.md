@@ -1,4 +1,4 @@
----
+﻿---
 id: type-into
 title: "Type Into"
 sidebar_label: "Type Into"
@@ -74,11 +74,12 @@ The Type Into activity allows you to type texts into any text field within the w
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Type Into** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Pick the target element**: Click **Pick target element** in the body of the activity, then click the input field (e.g., a search box or form field) on the web page. akaBot Studio will generate the **Selector** automatically.
-3. **Enter the text**: In the **Text** field in the body of the activity or in the **Properties** panel, type the value you want to input, enclosed in quotation marks. E.g., `"akaBot"`. You can also pass a String variable here directly (without quotes).
-4. **Clear the field first (optional)**: Check the **Empty Field** checkbox under **Before Type** in the **Properties** panel if you want to clear any existing content in the field before typing.
-5. **Run the workflow**: Execute the process. akaBot will locate the input field and type the specified text into it.
+1. **Place inside a browser container**: Drag the **Type Into** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Select the target element**: Click **Pick target element** in the activity body and select the input field on the webpage.
+3. **Configure the text to type**: In the **Text** field in the properties panel, enter the text you want to type enclosed in quotes (e.g., `"akaBot"`).
+4. **Run the workflow**: akaBot locates the target element and types the specified text into it.
+
+> For more information about selecting web elements and selectors, see **[Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)**.
 
 ## **Troubleshooting**
 
@@ -87,3 +88,7 @@ The Type Into activity allows you to type texts into any text field within the w
   * Verify that the selector is correct. If the target element contains dynamic attributes (such as changing IDs), open the Selector Editor and replace the dynamic parts with wildcard characters (* or ?).
   * Ensure the target element is visible and not hidden behind overlays or loader animations. Check the **Wait Visible** property.
 * **Extension Not Enabled**: Ensure the akaBot Web Extension is active and has permissions to run on the target website. Without it, Studio cannot highlight or interact with web elements.
+
+## **Related topics**
+
+* [Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)

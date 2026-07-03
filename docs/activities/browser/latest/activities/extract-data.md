@@ -1,4 +1,4 @@
----
+﻿---
 id: extract-data
 title: "Extract Data"
 sidebar_label: "Extract Data"
@@ -51,12 +51,18 @@ The Extract Data activity allows you to get data from a specified webpage.
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Extract Data** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Provide Config JSON**: In the **Config Json** field, input the path to your extraction configuration JSON file in quotes (e.g., `"C:\\RPA\\Configs\\extractConfig.json"`).
-3. **Map the Output**: Under **Output** -> **Output Json**, create a String variable named `jsonResult` (Ctrl+K -> type `jsonResult` -> press Enter) to store the extracted data.
-4. **Run the workflow**: Execute the process. akaBot will read the web content based on the config JSON and output the structured data in JSON format to your variable.
+1. **Place inside a browser container**: Drag the **Extract Data** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Configure target data**: Click the **Pick target element** helper to define the text or element to scrape.
+3. **Set the output variable**: Specify a DataTable variable in the **Extract Data** property of the properties panel to store the result.
+4. **Run the workflow**: akaBot extracts the configured web data and writes it to the designated variable.
+
+> For more information about selecting web elements and selectors, see **[Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)**.
 
 ## **Troubleshooting**
 
 * **Invalid Browser Session**: If the activity throws an error or fails to execute, ensure that it is running inside an active [Open Browser](/docs/activities/browser/latest/activities/open-browser.md) or [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md) container, and that the browser tab has not been closed.
 * **WebDriver Communication Failure**: If the browser driver (e.g. ChromeDriver) has crashed or disconnected, restart your browser session and check if the driver version matches your browser (see the [Environment Setup Guide](/docs/activities/browser/latest/setup-browser-environment.md)).
+
+## **Related topics**
+
+* [Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)

@@ -56,29 +56,12 @@ The Extract Structured Data activity allows you to extract structured data from 
 
 ## **Step-by-Step Usage**
 
-To extract a table of structured data from a webpage and write it to an Excel spreadsheet, follow these steps:
+1. **Place inside a browser container**: Drag the **Extract Structured Data** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Configure target structure**: Click the **Pick target element** helper and follow the wizard prompts to define columns and scrape structured table data from the webpage (for example, you can test with the HTML tables on https://www.w3schools.com/html/html_tables.asp)
+3. **Set the output variable**: Create and assign a DataTable variable in the **Extract Data** property to store the structured result.
+4. **Run the workflow**: akaBot scrapes the structured tables and outputs them into the assigned DataTable variable.
 
-1. **Add Open Browser Container**:
-   * Drag and drop an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md) activity into the designer panel.
-   * Set the URL to `"https://datatables.net/"`.
-
-2. **Add Extract Structured Data**:
-   * Drag and drop an **Extract Structured Data** activity inside the **Do** block of the **Open Browser** container.
-   * Click **Pick target element** in the body of the activity, then select the table elements on the web page to define the columns and finalize the extraction structure.
-   * In the **Properties** panel under **Output**, create a DataTable variable named `dt_` (Ctrl+K -> type `dt_` -> press Enter) and assign it to the **Result** field.
-
-3. **Add Excel Application Scope**:
-   * Drag and drop an **Excel Application Scope** activity below the **Open Browser** container.
-   * In the workbook path field, input the path to your target Excel file (e.g., `"output.xlsx"`).
-
-4. **Write Data to Excel**:
-   * Drag and drop an **Excel Write Range** activity inside the **Do** block of the **Excel Application Scope**.
-   * Set the **Sheet Name** to `"Sheet1"`.
-   * Set the **Starting Cell** to `"A1"`.
-   * In the **DataTable** input field, enter `dt_` (the DataTable variable created in Step 2).
-
-5. **Run the workflow**: 
-   * Execute the process. akaBot will launch the browser, navigate to the target site, extract the structured data table, and write the contents directly into the specified Excel sheet.
+> For more information about selecting web elements and selectors, see **[Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)**.
 
 ## **Troubleshooting**
 
@@ -91,3 +74,7 @@ To extract a table of structured data from a webpage and write it to an Excel sp
   * If the extraction times out while navigating between pages, increase the **Next Page Timeout MS** value.
   * Check the **Max Number Of Result** property. If the total number of items is greater than the limit (default `100`), only up to the specified limit is extracted. Set it to `0` to extract all available data.
 * **Extension Not Enabled**: Ensure the akaBot Web Extension is active and has permissions to run on the target website. Without it, Studio cannot highlight or interact with web elements.
+
+## **Related topics**
+
+* [Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)

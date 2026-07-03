@@ -1,4 +1,4 @@
----
+﻿---
 id: select-item
 title: "Select Item"
 sidebar_label: "Select Item"
@@ -69,14 +69,12 @@ The Select Item activity allows you to select an item from a combo box or list b
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Select Item** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Pick the target element**: Click **Pick target element** in the body of the activity, then select the target dropdown/combo box on the webpage. akaBot Studio will automatically generate a **Selector** to identify that element.
-3. **Choose Select Type**: In the body or **Properties** panel under **Input**, select the type of lookup from the **Select Type** dropdown:
-   * `INDEX`: To select the option by its numeric index (starting from `0`).
-   * `VALUE`: To select the option by its HTML `value` attribute.
-   * `TEXT`: To select the option by its visible display text.
-4. **Enter Select Value**: Under **Select Value**, type the index, value, or text of the target option in quotes (e.g., `"2"` for the third index, or `"Vietnam"` for display text).
-5. **Run the workflow**: Execute the process. akaBot will locate the dropdown and select the specified item.
+1. **Place inside a browser container**: Drag the **Select Item** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Select the target element**: Click **Pick target element** in the activity body and select the dropdown menu on the webpage.
+3. **Configure the item to select**: In the **Item** property, specify the text value of the item you want to select from the dropdown.
+4. **Run the workflow**: akaBot locates the dropdown and selects the specified item.
+
+> For more information about selecting web elements and selectors, see **[Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)**.
 
 ## **Troubleshooting**
 
@@ -85,3 +83,5 @@ The Select Item activity allows you to select an item from a combo box or list b
   * Verify that the selector is correct. If the target element contains dynamic attributes (such as changing IDs), open the Selector Editor and replace the dynamic parts with wildcard characters (* or ?).
   * Ensure the target element is visible and not hidden behind overlays or loader animations. Check the **Wait Visible** property.
 * **Extension Not Enabled**: Ensure the akaBot Web Extension is active and has permissions to run on the target website. Without it, Studio cannot highlight or interact with web elements.
+
+

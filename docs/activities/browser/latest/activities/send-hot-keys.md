@@ -1,4 +1,4 @@
----
+﻿---
 id: send-hot-keys
 title: "Send Hot Keys"
 sidebar_label: "Send Hot Keys"
@@ -77,3 +77,7 @@ The Send Hot Keys activity allows you to send a keyboard shortcut to a browser e
 
 > [!TIP]
 > A common use case is to place **Send Hot Keys** immediately after a [Type Into](/docs/activities/browser/latest/activities/type-into.md) activity targeting a search field, then select `ENTER` as the Special Key to submit the search query.
+
+## **Related topics**
+
+* [Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)

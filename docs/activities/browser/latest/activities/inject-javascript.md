@@ -59,44 +59,19 @@ The **Inject JavaScript** activity allows you to execute custom JavaScript code 
 
 ---
 
-## **Example of using the Inject JavaScript activity**
+## **Step-by-Step Usage**
 
-To demonstrate how to use the **Inject JavaScript** activity, we will create a workflow that opens a web browser, navigates to a webpage, and changes the background color of the body element to a color specified by an input argument.
-
-### **Step 1: Open the Browser**
-1. Drag and drop an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md) activity into the designer panel.
-2. Select the activity, and in the **Url** field under **Common**, type `"https://google.com"`.
-
-### **Step 2: Add Inject JavaScript**
-1. Drag and drop an **Inject JavaScript** activity inside the **Do** container of the **Open Browser** activity.
-2. Select the activity, and in the **Properties** panel under **Input**, configure the **Script File** text box by typing the JavaScript function that changes the background color:
+1. **Place inside a browser container**: Drag the **Open Browser** activity into the designer panel and enter `"https://google.com/"` in its **Url** field.
+2. **Add the Inject JavaScript activity**: Inside the **Do** container of the **Open Browser** activity, drag and drop the **Inject JavaScript** activity.
+3. **Prepare a JavaScript file**: Create a JavaScript file (for example, `test.js`) with the following content:
    ```javascript
-   "function (color) {
-       document.body.style.backgroundColor = color;
-       return 'Success';
-   }"
+   alert("Hello from akaBot!");
    ```
+   Save the file to your local machine.
+4. **Configure the script file path**: In the **Script File** field of the **Inject JavaScript** activity, browse to and select the JavaScript file (for example: `"C:\Users\<username>\Documents\test.js"`).
+5. **Run the workflow**: akaBot opens Google and injects the JavaScript file into the current page. An alert dialog displaying "Hello from akaBot!" appears.
 
-### **Step 3: Configure Input Arguments**
-To pass the color name from akaBot Studio into the JavaScript function:
-1. In akaBot Studio, create a String variable named `myColor` and assign it the default value `"lightblue"`.
-2. In the **Properties** panel of the **Inject JavaScript** activity, under **Input**, click the `...` button next to **Arguments** to open the editor.
-3. In the Arguments window, click **Create argument** and configure:
-   * **Name**: `color` (must match the parameter name in the JavaScript function signature)
-   * **Direction**: `In`
-   * **Type**: `String`
-   * **Value**: `myColor`
-4. Click **OK** to save.
-
-### **Step 4: Capture Output**
-To check the execution result of the script:
-1. In the **Properties** panel under **Output**, click the **Script Output** field.
-2. Press **Ctrl + K** to create a new String variable named `executionResult`.
-3. Drag a **Message Box** activity below the **Open Browser** container and set its content to `executionResult`.
-
-### **Step 5: Run the workflow**
-1. Run the process.
-2. akaBot will open Chrome to `https://google.com`, inject the JavaScript, change the page's background color to light blue, and display a Message Box with the value `"Success"`.
+![inject-javascript](/static/img/inject-javascript.png)
 
 ## **Troubleshooting**
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: click
 title: "Click"
 sidebar_label: "Click"
@@ -83,11 +83,10 @@ The Click activity is used to send a click action into a webpage.
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Click** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Pick the target element**: Click **Pick target element** in the body of the activity, then click the desired button, link, or element on the web page. akaBot Studio will automatically generate a **Selector** to identify that element.
-3. **Select Click Type (optional)**: In the body or **Properties** panel, choose the click type (`CLICK_SINGLE`, `CLICK_DOUBLE`, etc.). The default is a single left-click.
-4. **Configure Mouse Button (optional)**: Change the **Mouse Button** to `MOUSE_RIGHT` if a right-click is needed.
-5. **Run the workflow**: Execute the process. akaBot will locate the target element using the Selector and perform the click action.
+1. **Place inside a browser container**: Drag the **Click** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Select the target element**: Click **Pick target element** in the activity body and select the element on the webpage. For more details on element selection and selector optimization, see [Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md).
+3. **Configure properties (optional)**: Select the **Click Type** and **Mouse Button** if different from default.
+4. **Run the workflow**: akaBot locates the target element and clicks it.
 
 ## **Troubleshooting**
 
@@ -96,3 +95,7 @@ The Click activity is used to send a click action into a webpage.
   * Verify that the selector is correct. If the target element contains dynamic attributes (such as changing IDs), open the Selector Editor and replace the dynamic parts with wildcard characters (* or ?).
   * Ensure the target element is visible and not hidden behind overlays or loader animations. Check the **Wait Visible** property.
 * **Extension Not Enabled**: Ensure the akaBot Web Extension is active and has permissions to run on the target website. Without it, Studio cannot highlight or interact with web elements.
+
+## **Related topics**
+
+* [Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)

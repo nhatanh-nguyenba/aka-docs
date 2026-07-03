@@ -1,4 +1,4 @@
----
+﻿---
 id: check
 title: "Check/Uncheck"
 sidebar_label: "Check/Uncheck"
@@ -68,10 +68,12 @@ The Check/Uncheck activity allows you to check or uncheck a Checkbox.
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Check/Uncheck** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Pick the target element**: Click **Pick target element** in the body of the activity, then select the target checkbox or radio button on the webpage. akaBot Studio will automatically generate a **Selector** to identify that element.
-3. **Select the Action**: In the body or **Properties** panel under **Options**, select either `Check` (to check the box/button) or `Uncheck` (to uncheck/clear the box).
-4. **Run the workflow**: Execute the process. akaBot will locate the checkbox/radio button using the Selector and perform the selected check/uncheck action.
+1. **Place inside a browser container**: Drag the **Check** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Select the target element**: Click **Pick target element** in the activity body and select the checkbox or radio button on the webpage.
+3. **Configure the action**: Set the **Action** property to `CHECK` or `UNCHECK` depending on your automation goal.
+4. **Run the workflow**: akaBot locates the element and checks/unchecks it.
+
+> For more information about selecting web elements and selectors, see **[Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)**.
 
 ## **Troubleshooting**
 
@@ -80,3 +82,7 @@ The Check/Uncheck activity allows you to check or uncheck a Checkbox.
   * Verify that the selector is correct. If the target element contains dynamic attributes (such as changing IDs), open the Selector Editor and replace the dynamic parts with wildcard characters (* or ?).
   * Ensure the target element is visible and not hidden behind overlays or loader animations. Check the **Wait Visible** property.
 * **Extension Not Enabled**: Ensure the akaBot Web Extension is active and has permissions to run on the target website. Without it, Studio cannot highlight or interact with web elements.
+
+## **Related topics**
+
+* [Working with Web Elements](/docs/activities/browser/latest/user-guide/working-with-web-elements.md)

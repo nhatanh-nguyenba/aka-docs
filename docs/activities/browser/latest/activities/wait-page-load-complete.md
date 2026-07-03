@@ -1,4 +1,4 @@
----
+﻿---
 id: wait-page-load-complete
 title: "Wait Page Load Complete"
 sidebar_label: "Wait Page Load Complete"
@@ -44,11 +44,11 @@ The Wait Page Load Complete allows you to waits until a webpage is fully loaded.
 
 ## **Step-by-Step Usage**
 
-1. **Place inside a browser container**: The **Wait Page Load Complete** activity must be placed inside an [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md) container.
-2. **Configure properties (optional)**: Modify the **Display Name**, **Continue On Error**, **Delay Before**, or **Delay After** in the Properties panel if needed (e.g., set **Delay Before** to wait a brief moment before checking the load status).
-3. **Map the Output (optional)**: Under **Output** -> **Wait Success**, create a Boolean variable named `isLoaded` (Ctrl+K -> type `isLoaded` -> press Enter) to store whether the page loaded successfully.
-4. **Run the workflow**: Execute the process. akaBot will block further execution until the current webpage's document status transitions to complete (fully loaded).
+1. **Place inside a browser container**: Drag the **Wait Page Load Complete** activity into the **Do** container of [Open Browser](/docs/activities/browser/latest/activities/open-browser.md), [Attach Browser](/docs/activities/browser/latest/activities/attach-browser.md), or [Browser Scope](/docs/activities/browser/latest/activities/browser-scope.md).
+2. **Configure timeout (optional)**: Set the **Timeout MS** in the properties panel to adjust how long to wait for the page load.
+3. **Run the workflow**: akaBot pauses execution until the active web page is fully loaded.
 
+> For more information about browser containers and browser sessions, see **[Browser Workflow](/docs/activities/browser/latest/user-guide/browser-workflow.md)**.
 
 ## **Troubleshooting**
 
