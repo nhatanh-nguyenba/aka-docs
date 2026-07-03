@@ -9,28 +9,21 @@ displayed_sidebar: studioSidebar
 
 # About Workflow Analyzer
 
-Workflow Analyzer is a static analysis tool in akaBot Studio that evaluates automation projects against predefined development rules. Instead of executing workflows, it analyzes workflow files, activities, variables, and project settings to identify issues that may affect code quality, maintainability, reliability, and compliance with development standards.
+Workflow Analyzer is a static code analysis tool that helps ensure your automation projects meet quality and development standards. Unlike runtime validation, Workflow Analyzer analyzes workflows without executing them.
 
-Running Workflow Analyzer during development helps identify issues early and improve project consistency before testing or publishing.
+Workflow Analyzer uses a predefined set of rules to identify inconsistencies that may affect code quality, maintainability, reliability, performance, and compliance with development standards.
 
 ![Workflow Analyzer](/static/img/about-workflow-analyzer.png)
 
-## How Workflow Analyzer Works
+The following commands are available:
 
-Workflow Analyzer performs static analysis without executing the automation.
-
-During analysis, Workflow Analyzer:
-
-1. Scans the selected workflow or project.
-2. Evaluates workflow elements against the enabled rules.
-3. Detects rule violations.
-4. Reports the analysis results.
-
-Analysis results include the severity and details of each detected issue.
+- **Analyze File** – Analyzes the workflow currently open in the Designer.
+- **Analyze Project** – Analyzes all workflows in the current automation project.
+- **Analyze Settings** – Opens the **Analyzer** window, where you can configure Workflow Analyzer rules and their settings.
 
 ## Key Concepts
 
-Understanding the following concepts helps you interpret Workflow Analyzer results.
+The following concepts help you understand how Workflow Analyzer validates automation projects.
 
 ### Rules Naming Convention
 
@@ -38,23 +31,23 @@ Each Workflow Analyzer rule is identified by a unique rule code.
 
 A rule code consists of three components:
 
-- **ST (Studio)** – Indicates the rule applies to akaBot Studio.
+- **ST (Studio)** – Indicates the rule belongs to akaBot Studio.
 - **NMG (Naming)** – Indicates the rule category.
 - **001** – The unique rule identifier.
 
-Example:
+For example:
 
 ```text
 ST-NMG-001
 ```
 
-Rule codes are displayed throughout Workflow Analyzer, making it easier to identify and reference specific rules.
+Rule codes are displayed throughout Workflow Analyzer, making it easier to identify, search for, and reference specific rules.
 
 ![Analyzer](/static/img/analyzer.png)
 
 ### Rule Categories
 
-Workflow Analyzer organizes rules into categories based on the aspect of the project they validate.
+Workflow Analyzer groups rules into categories based on the aspect of the project they validate. Rule categories make it easier to browse, configure, and manage related rules.
 
 The available rule categories include:
 
@@ -67,67 +60,52 @@ The available rule categories include:
 - Reliability Rules
 - Security Rules
 
-Each category validates a specific aspect of an automation project.
+### Rule Scope
 
-### Analysis Scope
-
-Each rule is associated with a scope that defines the level at which it is evaluated.
+Each rule has a scope that defines the level at which it is evaluated.
 
 | Scope | Description |
 | ------ | ----------- |
 | **Activity** | Validates individual activities and their properties. |
-| **Workflow** | Validates workflow-level elements, such as arguments, variables, and workflow structure. |
-| **Project** | Validates project-wide settings and overall project structure. |
+| **Workflow** | Validates workflow-level elements, such as variables, arguments, and workflow structure. |
+| **Project** | Validates project-wide settings and project structure. |
 
-You can filter rules by scope in the Analyzer window.
+You can filter rules by scope in the **Analyzer** window.
 
-![Analysis Scope](/static/img/all-scopes-wa.png)
+![Rule Scope](/static/img/all-scopes-wa.png)
 
 ### Severity Levels
 
-Each rule is assigned a severity level that indicates the importance of the reported issue.
+Each rule is assigned a severity level that indicates the importance of a detected issue.
 
 | Severity | Description |
 | -------- | ----------- |
-| **Error** | Indicates an issue that should be resolved before publishing or deploying the project. |
+| **Error** | Indicates an issue that should be resolved before running, publishing, or deploying the project. |
 | **Warning** | Indicates a recommended improvement to code quality or maintainability. |
 | **Info** | Provides informational guidance and development recommendations. |
 
-![severity-levels.png](/static/img/severity-levels.png)
+![Severity Levels](/static/img/severity-levels.png)
 
-## Analysis Targets
+## Analysis Scope
 
-Workflow Analyzer supports analyzing:
+Workflow Analyzer supports two analysis scopes:
 
-- The current workflow.
-- The entire automation project.
+- **Current Workflow** – Analyzes only the active workflow.
+- **Entire Project** – Analyzes all workflows in the current project.
 
-Analyzing the entire project is recommended before publishing to ensure all workflows comply with the configured rules.
+Running analysis on the entire project is recommended before publishing.
 
-![Analysis Targets](/static/img/setting-wa.png)
-
-## Actions
-
-Workflow Analyzer provides actions for running analysis, reviewing results, and exporting reports.
-
-Available actions include:
-
-- Run analysis.
-- Search analysis results.
-- Filter reported issues.
-- Export analysis results.
-
-The available actions depend on the selected Workflow Analyzer window.
+![Analysis Scope](/static/img/setting-wa.png)
 
 ## Managing Rules
 
-Workflow Analyzer uses configurable rules to validate automation projects. Rules can be enabled, disabled, or customized to match your organization's development standards.
+Workflow Analyzer uses configurable rules to validate automation projects. Rules can be enabled, disabled, or customized to meet your organization's development standards.
 
 ## Configure Rules
 
-Rules are configured from the **Analyzer** window.
+Rules are configured in the **Analyzer** window.
 
-Depending on the selected rule, you can:
+For each rule, you can:
 
 - Enable or disable the rule.
 - Change its severity level.
@@ -144,9 +122,12 @@ If a rule's default values, such as Regex or threshold values, have been modifie
 
 ## Validation
 
-Workflow Analyzer validates workflow elements against the enabled analysis rules and reports any detected violations in the Analysis Results window.
+Workflow Analyzer performs static code analysis to check your project against configured development rules. Because it runs static analysis, it does not execute workflows or validate runtime behavior.
 
-Because Workflow Analyzer performs static analysis, it does not execute workflows or validate runtime behavior.
+**IMPORTANT**
+> Before running Workflow Analyzer, ensure that the workflow contains no activity validation errors (no red validation indicators). Workflow Analyzer can analyze only valid workflows.
+
+![validation-wa.png](/static/img/validation-wa.png)
 
 ## Managing Errors
 
@@ -162,9 +143,7 @@ Workflow Analyzer can be executed from the command line when supported by your e
 
 ## Exporting Workflow Analyzer Results
 
-After an analysis completes, the **Analysis Results** window allows you to search, filter, review, and export analysis results.
-
-![Analysis Results](/static/img/managing-errors.png)
+Analysis results can be exported for documentation, project review, or integration with development workflows.
 
 ## Enforcing the Workflow Analyzer before Run, Publish, or Push/Check in
 
@@ -174,7 +153,7 @@ When enabled, projects are validated against the configured rules before the sel
 
 ## Next Steps
 
-Continue with the following topics:
+To learn more, see:
 
 - Running Workflow Analyzer
 - Configuring Workflow Analyzer Rules
