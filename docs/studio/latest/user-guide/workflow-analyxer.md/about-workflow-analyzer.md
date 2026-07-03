@@ -26,7 +26,7 @@ During analysis, Workflow Analyzer:
 3. Detects rule violations.
 4. Reports the analysis results.
 
-Analysis results include the severity, description, recommendation, and affected workflow for each detected issue.
+Analysis results include the severity and details of each detected issue.
 
 ## Key Concepts
 
@@ -92,6 +92,8 @@ Each rule is assigned a severity level that indicates the importance of the repo
 | **Error** | Indicates an issue that should be resolved before publishing or deploying the project. |
 | **Warning** | Indicates a recommended improvement to code quality or maintainability. |
 | **Info** | Provides informational guidance and development recommendations. |
+
+![severity-levels.png](/static/img/severity-levels.png)
 
 ## Analysis Targets
 
@@ -161,6 +163,8 @@ Workflow Analyzer can be executed from the command line when supported by your e
 ## Exporting Workflow Analyzer Results
 
 After an analysis completes, the **Analysis Results** window allows you to search, filter, review, and export analysis results.
+
+![Analysis Results](/static/img/managing-errors.png)
 
 ## Enforcing the Workflow Analyzer before Run, Publish, or Push/Check in
 
