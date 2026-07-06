@@ -3,6 +3,8 @@ id: invoice-list
 title: View the Invoice List
 sidebar_label: Invoice List
 sidebar_position: 3
+description: View, search, and export consolidated invoice data.
+displayed_sidebar: scaleCheckSidebar
 ---
 
 # View the Invoice List

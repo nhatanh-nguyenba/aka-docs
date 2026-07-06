@@ -3,6 +3,8 @@ id: api-and-webhook
 title: API Integration and Webhook
 sidebar_label: API and Webhook
 sidebar_position: 1
+description: Learn how to integrate Scale Check with external systems using APIs and Webhooks.
+displayed_sidebar: scaleCheckSidebar
 ---
 
 # API Integration and Webhook

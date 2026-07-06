@@ -3,6 +3,8 @@ id: users-and-permissions
 title: Set Up Users and Permissions
 sidebar_label: Users and Permissions
 sidebar_position: 1
+description: Manage branches, users, and permissions for your organization.
+displayed_sidebar: scaleCheckSidebar
 ---
 
 # Set Up Users and Permissions

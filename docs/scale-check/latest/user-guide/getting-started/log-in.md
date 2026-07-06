@@ -3,6 +3,8 @@ id: log-in
 title: Log in to the System
 sidebar_label: Log in
 sidebar_position: 1
+description: Instructions to log in to the system and overview of user roles.
+displayed_sidebar: scaleCheckSidebar
 ---
 
 # Log in to the System

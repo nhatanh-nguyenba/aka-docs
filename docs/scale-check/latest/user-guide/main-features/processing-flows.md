@@ -3,6 +3,8 @@ id: processing-flows
 title: Set Up a Processing Flow
 sidebar_label: Processing Flows
 sidebar_position: 1
+description: Set up and monitor automated invoice processing flows.
+displayed_sidebar: scaleCheckSidebar
 ---
 
 # Set Up a Processing Flow

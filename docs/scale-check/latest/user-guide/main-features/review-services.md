@@ -3,6 +3,8 @@ id: review-services
 title: Review Each Service
 sidebar_label: Review Services
 sidebar_position: 2
+description: Monitor and review results of invoice processing services.
+displayed_sidebar: scaleCheckSidebar
 ---
 
 # Review Each Service
