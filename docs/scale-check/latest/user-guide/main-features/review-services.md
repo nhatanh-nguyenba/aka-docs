@@ -61,3 +61,5 @@ Use this service to compare and verify invoices against tax authority data.
 - View history and results in the Details / Statistics tabs. Each lookup deducts credits based on the service pricing:
 
 ![taxpayer-lookup-details](/static/img/taxpayer-lookup-details.png)
+
+> All valid and successfully downloaded invoices from the above services are consolidated into a single location. Move to [Invoice List](./invoice-list.md) to manage all your data.

@@ -25,3 +25,5 @@ Main feature groups:
 - [Taxpayer Lookup](./user-guide/main-features/review-services.md#taxpayer-lookup): Check the company operating status.
 - [Processing Flows](./user-guide/main-features/processing-flows.md): Set up invoice processing flows.
 - [Invoice List](./user-guide/main-features/invoice-list.md): View, search, and export consolidated invoice data.
+
+> **Are you ready?** Move to [Log In](./user-guide/getting-started/log-in.md) to start exploring and using the system now!
