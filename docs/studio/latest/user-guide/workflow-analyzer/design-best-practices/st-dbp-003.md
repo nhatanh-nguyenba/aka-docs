@@ -16,8 +16,8 @@ displayed_sidebar: studioSidebar
 
 The rule checks whether exceptions are caught with a purpose, and not only to prevent error messages.
 
+![st-dbp-003](/static/img/st-dbp-003.png)
+
 ## Recommendation
 
 It is recommended to insert log messages in the Catch block of a Try Catch activity, in addition to the exception handling itself.
-
-![st-dbp-003](/static/img/st-dbp-003.png)

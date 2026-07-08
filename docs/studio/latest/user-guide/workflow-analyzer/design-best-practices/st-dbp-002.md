@@ -22,7 +22,7 @@ Reduce the number of arguments in a workflow to a minimum.
 
 ## Modifying the Rule
 
-In the Project Settings window, select the Workflow Settings tab. Find and select the rule, as in the image below:
+In the Project Settings window, select the Arguments Metrics tab. Find and select the rule, as in the image below:
 
 ![st-dbp-002](/static/img/st-dbp-002.png)
 
