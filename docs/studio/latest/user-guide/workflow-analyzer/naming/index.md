@@ -17,7 +17,7 @@ The following naming rules are available in the Workflow Analyzer:
 | [Variable Naming](./st-nmg-001.md) | ST-NMG-001 | Activity |
 | [Argument Naming](./st-nmg-002.md) | ST-NMG-002 | Workflow |
 | [Display Name Duplication](./st-nmg-004.md) | ST-NMG-004 | Workflow |
-| [Variable Shadowing](./st-nmg-005.md) | ST-NMG-005 | Workflow |
+| [Variable Shadowing](./st-nmg-003.md) | ST-NMG-003 | Workflow |
 | [Variable Argument Collision](./st-nmg-006.md) | ST-NMG-006 | Workflow |
 | [Variable Length](./st-nmg-008.md) | ST-NMG-008 | Activity |
 | [Prefix Datatable Variables](./st-nmg-009.md) | ST-NMG-009 | Activity |
