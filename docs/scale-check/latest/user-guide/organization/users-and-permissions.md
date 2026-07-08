@@ -44,3 +44,6 @@ Administrators can create new users, limit data access by branch or department, 
 7. Click Save to finish.
 
 ![user-name-scalecheck](/static/img/user-name-scalecheck.png)
+
+### Next Steps
+Once you have enough users in the system, you can start [Configuring Processing Flows](../main-features/processing-flows.md) to process invoices.

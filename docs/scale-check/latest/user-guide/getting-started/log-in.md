@@ -22,3 +22,8 @@ displayed_sidebar: scaleCheckSidebar
 | User Admin | Company administrator | [Create users, assign permissions](../organization/users-and-permissions.md), set up tax authority accounts and schedules, and [configure processing flows](../main-features/processing-flows.md). |
 | Business User | Business operations user | Create download or lookup requests, run processing flows, [view invoices, and export invoice data](../main-features/invoice-list.md). |
 | Customer Developer | Integration engineer | View [API and Webhook documentation](../integration/api-and-webhook.md). |
+
+### Next Steps
+After a successful login:
+- If you are an Admin: Proceed to [Set Up Users and Permissions](../organization/users-and-permissions.md) for your team.
+- If you are a Business User: Start by [Configuring Processing Flows](../main-features/processing-flows.md).
