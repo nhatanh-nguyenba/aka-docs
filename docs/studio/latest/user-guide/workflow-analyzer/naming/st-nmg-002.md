@@ -50,7 +50,7 @@ Example of Regex expression: `^in_(dt_)?([a-z]|[A-Z]|[0-9])+‐([a-z]|[A-Z]|[0-9
 Valid names: `in_Hello1‐World2`, `in_Hello‐World`.
 
 ## Modifying the Rule
-In the Analyzer window, find the rule and select it. You can modify the **Regex** or **Prefix** parameters according to your own naming conventions.
+In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find the rule and select it. You can modify the **Regex** or **Prefix** parameters according to your own naming conventions.
 
 ## Reset to Default Values
 The default values for ST-NMG-002 Regex are:
@@ -59,6 +59,6 @@ The default values for ST-NMG-002 Regex are:
 * OutRegex: `^out_(dt_)?([A-Z]|[a-z])+([0-9])*$`
 * InOutRegex: `^io_(dt_)?([A-Z]|[a-z])+([0-9])*$`
 
-To reset these values to default right-click a rule in the Analyzer window, and then click **Reset to default**.
+To reset these values to default, right-click the rule in the Analyzer window, and then click **Reset to default**.
 
 ![rtd-nmg-002](/static/img/rtd-nmg-002.png)

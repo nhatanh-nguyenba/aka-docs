@@ -63,10 +63,10 @@ The default prefix for this rule is `v_`, but it can be changed to match your sp
 
 ## Modifying the Rule
 
-In the Analyzer window, find the rule and select it. You can modify the **Regex** or **Prefix** parameters according to your own naming conventions.
+In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find the rule and select it. You can modify the **Regex** or **Prefix** parameters according to your own naming conventions.
 
 ## Reset to Default
 
-By default, the rule is enabled. You can reset it to its default settings by right-clicking the rule in the Analyzer window and clicking **Reset to default**.
+By default, the rule is enabled. You can reset it to its default settings by right-clicking the rule in the Analyzer window, and clicking **Reset to default**.
 
 ![rtd-nmg-001](/static/img/rtd-nmg-001.png)

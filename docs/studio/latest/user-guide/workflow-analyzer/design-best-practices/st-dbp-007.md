@@ -22,7 +22,7 @@ It is recommended to reduce the number of flowchart layers to a minimum to ensur
 
 ## Modifying the Rule
 
-In the Project Settings window, select the Workflow Analyzer Settings tab. Find and select the rule, as in the image below:
+In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule.
 
 ![st-dbp-007](/static/img/st-dbp-007.png)
 
@@ -34,6 +34,6 @@ Modify the value to 3 and the rule logs an error message only if the number flow
 
 The default value for ST-DBP-007 is 1.
 
-To reset the value to default right-click the rule in the Settings window, and then click Reset to default.
+To reset the value to default, right-click the rule in the Analyzer window, and then click **Reset to default**.
 
 ![st-dbp-007](/static/img/st-dbp-007-reset.png)

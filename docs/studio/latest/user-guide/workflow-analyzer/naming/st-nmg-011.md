@@ -24,4 +24,4 @@ Make sure the names of existing DataTable arguments start with the argument type
 
 ## Modifying the Rule
 
-In the Analyzer window, find and select the rule. You can enable or disable this rule according to your preferences.
+In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule. You can enable or disable this rule according to your preferences.

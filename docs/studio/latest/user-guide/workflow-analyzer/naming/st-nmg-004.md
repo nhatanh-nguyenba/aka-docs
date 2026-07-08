@@ -26,7 +26,7 @@ By adding a more descriptive display name, it might become easier to understand 
 
 ## Modifying the Rule
 
-In the Analyzer window, find and select the rule, as in the image below:
+In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule.
 
 ![st-nmg-04](/static/img/st-nmg-04.png)
 

@@ -24,7 +24,7 @@ The names of variables should not be longer than a set number of characters. It 
 
 ## Modifying the Rule
 
-In the Analyzer window, find and select the rule. You can add a custom number of characters in the **MaxLength** field.
+In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule. You can add a custom number of characters in the **MaxLength** field.
 
 If we add the number 10, then the rule checks if the names of variables defined in the file or project exceed 10 characters.
 
@@ -32,6 +32,6 @@ If we add the number 10, then the rule checks if the names of variables defined 
 
 The default value for ST-NMG-008 is 30.
 
-To reset the value to default right-click the rule in the Analyzer window, and then click **Reset to default**.
+To reset the value to default, right-click the rule in the Analyzer window, and then click **Reset to default**.
 
 ![rtd-nmg-008](/static/img/rtd-nmg-008.png)
