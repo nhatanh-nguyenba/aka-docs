@@ -22,6 +22,3 @@ Detects when a variable has the same name as a variable in a parent scope or a w
 
 Use unique variable names across sibling and parent scopes to avoid shadowing
 
-## Modifying the Rule
-
-In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule. You can enable or disable this rule according to your preferences.

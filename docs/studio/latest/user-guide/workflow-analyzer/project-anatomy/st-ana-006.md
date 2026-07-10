@@ -22,6 +22,3 @@ The project must contain a 'Main.xaml' file in the root directory
 
 Add a 'Main.xaml' file to the root of the project to serve as the main workflow
 
-## Modifying the Rule
-
-In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule. You can enable or disable this rule according to your preferences.

@@ -22,6 +22,3 @@ Checks if an 'If' activity has both Then and Else branches left empty
 
 Remove the empty 'If' activity or implement logic in the Then/Else branches
 
-## Modifying the Rule
-
-In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule. You can enable or disable this rule according to your preferences.

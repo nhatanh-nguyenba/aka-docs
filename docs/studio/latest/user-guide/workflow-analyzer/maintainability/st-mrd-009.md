@@ -26,10 +26,6 @@ It is recommended to reduce the nesting depth by refactoring the workflow into m
 
 *   **Threshold:** The maximum number of nested activities allowed. Default value: `7`.
 
-## Modifying the Rule
-
-In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule. You can enable or disable this rule according to your preferences.
-
 This means that if the Workflow Analyzer finds at least 7 nested activities, a message is logged in the Error List. You can modify the threshold value (e.g., to 3), and the rule will log an error message only if the number of nested activities surpasses the new threshold.
 
 ### Reset to Default Value

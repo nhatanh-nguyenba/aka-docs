@@ -21,7 +21,3 @@ Checks if a variable declared in a child scope has the same name as a variable/a
 ## Recommendation
 
 Rename the variable in the child scope to avoid shadowing
-
-## Modifying the Rule
-
-In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule. You can enable or disable this rule according to your preferences.

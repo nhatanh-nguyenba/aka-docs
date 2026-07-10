@@ -21,7 +21,3 @@ The rule checks whether activities used in the file or project have the default 
 ## Recommendation
 
 Check whether it would be easier to understand what the activity does by adding a more descriptive title
-
-## Modifying the Rule
-
-In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule. You can enable or disable this rule according to your preferences.

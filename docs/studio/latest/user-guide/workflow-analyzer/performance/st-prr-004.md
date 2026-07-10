@@ -22,6 +22,3 @@ Detects 'Delay' activities that use hardcoded time values (Literals) instead of 
 
 Use a variable or a configuration setting for the Delay duration to allow for environment-specific adjustments without code changes
 
-## Modifying the Rule
-
-In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule. You can enable or disable this rule according to your preferences.

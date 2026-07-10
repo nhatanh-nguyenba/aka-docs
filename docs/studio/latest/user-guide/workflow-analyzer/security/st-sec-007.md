@@ -32,8 +32,4 @@ Once a `SecureString` is retrieved, it should be used to log into applications b
 
 *   **Keywords:** A list of keywords to identify sensitive arguments. Default values: `password,secret,token,cre`...
 
-## Modifying the Rule
-
-In the ribbon, click the **Analyze** button dropdown and select **Analyze Settings** to open the Analyzer window. Find and select the rule. You can enable or disable this rule according to your preferences.
-
 ![st-sec-007-rtd](/static/img/st-sec-007-rtd.png)
