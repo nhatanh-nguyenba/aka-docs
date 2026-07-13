@@ -14,13 +14,13 @@ displayed_sidebar: studioSidebar
 
 ## Description
 
-The rule checks whether any activity is nested too deeply within other activities for maintainability and readability reasons. The default threshold is 7.
+This rule checks if your workflow has too many activities placed inside one another (for example, an *If* inside a *Loop* inside another *Sequence*). Deep nesting makes the automation logic very complicated to read, test, and maintain. By default, the analyzer warns you if the nesting depth reaches 7 levels.
 
 ![st-mrd-009](/static/img/st-mrd-009.png)
 
 ## Recommendation
 
-It is recommended to reduce the nesting depth by refactoring the workflow into multiple smaller, reusable workflows.
+Reduce the nesting depth by breaking down the complex logic into smaller, separate workflows. You can use the **Invoke Workflow File** activity to call these smaller pieces, keeping your main workflow clean and easy to follow.
 
 ## Parameters
 

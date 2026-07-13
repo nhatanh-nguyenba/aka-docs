@@ -14,11 +14,11 @@ displayed_sidebar: studioSidebar
 
 ## Description
 
-The rule checks whether exceptions are caught with a purpose, and not only to prevent error messages
+This rule checks if a `Try Catch` activity has an empty `Catch` block. Catching an error without doing anything (like logging the error or handling it) simply hides the error. This makes it very difficult to troubleshoot because the automation will fail silently without leaving a trace.
 
 ![st-dbp-003](/static/img/st-dbp-003.png)
 
 ## Recommendation
 
-It is recommended to insert log messages in the Catch block of a Try Catch activity, in addition to the exception handling itself
+Always add at least a **Log Message** activity inside the `Catch` block to record the error details. This helps you easily trace and fix issues if the workflow encounters an exception.
 

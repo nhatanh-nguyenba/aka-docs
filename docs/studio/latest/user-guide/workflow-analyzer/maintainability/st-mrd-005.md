@@ -14,11 +14,11 @@ displayed_sidebar: studioSidebar
 
 ## Description
 
-Finds sequences that contain only a single child activity, adding unnecessary nesting
+This rule detects `Sequence` activities that contain only one single activity inside them. Using a Sequence to hold just one item creates unnecessary layers (nesting) in your workflow, making the visual layout cluttered and harder to read.
 
 ![st-mrd-005](/static/img/st-mrd-005.png)
 
 ## Recommendation
 
-Move the child activity out of the sequence and remove the redundant sequence container
+Simply drag the single child activity out of the Sequence, and then delete the empty Sequence. This flattens your workflow and keeps the structure clean.
 

@@ -14,11 +14,11 @@ displayed_sidebar: studioSidebar
 
 ## Description
 
-Detects when a variable has the same name as a variable in a parent scope or a workflow argument
+This rule checks if you have created a variable inside a specific activity (like a Sequence or Loop) that has the exact same name as another variable in the overall workflow (the parent scope) or as an argument. When this happens, the inner variable "hides" or "shadows" the outer one. This can cause confusing errors where your automation uses the wrong data during execution.
 
 ![st-nmg-05](/static/img/st-nmg-05.png)
 
 ## Recommendation
 
-Use unique variable names across sibling and parent scopes to avoid shadowing
+Rename the variable in the inner (child) scope to make it unique. This ensures the workflow uses the correct variable and avoids unexpected behaviors.
 
