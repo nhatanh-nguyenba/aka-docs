@@ -49,7 +49,7 @@ You need to prepare firstly an akaBot security certificate then trust it in your
 
 **Step 1:** Open Java Security folder.
 
-Folder path: “C:\Program Files\Java\jdk-11\security”
+Folder path: “C:\Program Files\Java\jdk-11\lib\security”
 
 **Step 2:** Backup java system *cacerts* and *cacerts - original* files to another folder to roll back if any errors.
 
