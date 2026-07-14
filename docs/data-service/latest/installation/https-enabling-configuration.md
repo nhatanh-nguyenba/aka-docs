@@ -99,7 +99,7 @@ Run Tomcat configure application and make sure akaBot Center will use profile "p
 
 `-Dspring.profiles.active=prod,tls` 
 
-![tomcat-8.5-dataservice](/static/img/tomcat-8.5-dataservice.png)
+![tomcat-8.5-dataservice](/static/img/tomcat-8-5-dataservice.png)
 
 ## 5. Run Applications 
 
