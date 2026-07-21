@@ -48,12 +48,12 @@ The following actions are available in the Debug ribbon while a debugging sessio
 
 **Open Logs** is available from the **Home** ribbon tab, not the Debug tab. It opens the folder containing the log files generated during execution, so you can review detailed information about what happened while debugging.
 
-![Open Logs](/static/img/image-20220506164423-31.png)
+![open-logs](/static/img/open-logs.png)
 
 ### Setting a Breakpoint
 
 1. Select the activity where you want execution to pause.
-2. On the **Debug** ribbon, click **Breakpoints**, then select **Toggle Breakpoint** from the menu.
+2. On the **Debug** ribbon, click **Breakpoints**, then select **Toggle Breakpoint** from the menu (or press `F9`).
 
    ![debug-breakpoint-set](/static/img/debug-breakpoint-set.png)
 
@@ -62,9 +62,22 @@ The following actions are available in the Debug ribbon while a debugging sessio
    ![breakpoint-log-message](/static/img/breakpoint-log-message.png)
 
 4. Click **Debug**. Execution pauses right before the activity with the breakpoint runs.
-5. Use **Step Into**, **Step Over**, or **Continue** to resume from there.
+5. Use **Step Into** (`F11`), **Step Over** (`F10`), or **Continue** to resume from there.
 
 To remove a single breakpoint, select its activity, click **Breakpoints**, then **Toggle Breakpoint** again. To remove every breakpoint in the project at once, click **Breakpoints**, then **Delete All Breakpoints**.
+
+### Shortcuts
+
+The following keyboard shortcuts are available for the most common debugging and running actions:
+
+| Action | Shortcut |
+| --- | --- |
+| **Debug** | `Ctrl + F5` |
+| **Start** | `F5` |
+| **Step Into** | `F11` |
+| **Step Over** | `F10` |
+| **Toggle Breakpoint** | `F9` |
+| **Stop** | `Shift + F5` |
 
 ## The Locals Panel
 
@@ -78,7 +91,7 @@ While debugging, the panel is organized into three areas:
 - **Properties of [activity] (previous)** — Shows the input and output properties of the most recently executed activity, such as the **Message** property of a **Log Message** activity.
 - **Arguments** — Lists the arguments defined for the current workflow, together with their type and current value.
 
-The Locals panel is only available while a debugging session is running, and opens automatically the first time you start one. If it isn't visible, look for the **Locals** tab next to **Properties**, **Workflow Outline**, and **Ask AI**. It updates automatically after each activity executes, making it easy to confirm that your workflow is producing the values you expect.
+The Locals panel is only available while a debugging session is running, and opens automatically the first time you start one. If it isn't visible, look for the **Locals** tab next to **Properties**, **Workflow Outline**, and **AkaNinja**. It updates automatically after each activity executes, making it easy to confirm that your workflow is producing the values you expect.
 
 ## The Breakpoints Panel
 
@@ -118,25 +131,27 @@ To add a new entry, click the empty row at the bottom of the panel (showing **En
 
 Values in the Watches panel are refreshed automatically after each activity executes while debugging. Use **Delete** to remove the selected entry, **Clear** to remove every entry at once, or **Refresh** to re-evaluate all watched expressions.
 
-## Quick Example: Debugging a Sample Workflow
+##  Example: Debugging a Sample Workflow
 
-This example walks through debugging a simple **Sequence** that logs a message, updates two variables, then branches on a condition.
+This example walks through debugging a simple **Sequence** that assigns two numbers, sums them, then branches on whether the sum is greater than 10.
 
-**The workflow**
+#### The Workflow
 
 | # | Activity | Details |
 | --- | --- | --- |
-| 1 | **Log Message** | Logs the current value of `stringVarriable`. |
-| 2 | **Assign** | `intVariable = 4 + 7` |
-| 3 | **Assign** | `stringVarriable = stringVarriable + " World"` |
-| 4 | **If** | Condition: `boolVariable` — logs `"Yes, it's true"` in **Then**, or `"No, it's not"` in **Else**. |
+| 1 | **Assign** | `number1 = 4` |
+| 2 | **Assign** | `number2 = 7` |
+| 3 | **Assign** | `sum = number1 + number2` |
+| 4 | **If** | Condition: `sum > 10` — logs `"Sum of two numbers is greater than 10!"` in **Then**, or `"Sum of two numbers is smaller than 10!"` in **Else**. |
 
-The Sequence defines three variables: `stringVarriable` (String, default `"hello"`), `intVariable` (Int32, no default), and `boolVariable` (Boolean, default `True`).
+The Sequence defines three variables: `number1`, `number2`, and `sum` (all Int32, no default).
 
 Where you set breakpoints is entirely up to you — it depends on which activities you want to pause on and inspect. This example sets one on each of the four activities above, so every variable change can be checked step by step.
 
-1. Set a breakpoint on each activity (see [Setting a Breakpoint](#setting-a-breakpoint)), then click **Debug**.
-2. Click **Continue** to move from one breakpoint to the next. After each **Assign** runs, check the **Locals** panel: `intVariable` becomes `11`, then `stringVarriable` becomes `"hello World"`.
-3. At the **If** breakpoint, use **Step Into** — since `boolVariable` is `True`, execution follows the **Then** branch and logs `"Yes, it's true"`.
+1. Set a breakpoint on each activity (see [Setting a Breakpoint](#setting-a-breakpoint)), then click **Debug** (or press `Ctrl + F5`).
+2. Click **Continue** to move from one breakpoint to the next. Watch the **Locals** panel: `number1` becomes `4`, then `number2` becomes `7`, then `sum` becomes `11`.
+3. At the **If** breakpoint, use **Step Into** — since `sum` (`11`) is greater than `10`, execution follows the **Then** branch and logs `"Sum of two numbers is greater than 10!"`.
 
-Open the **Breakpoints** panel any time to see all four breakpoints at once, or add `stringVarriable` to the **Watches** panel to track it without switching back to Locals.
+Open the **Breakpoints** panel any time to see all four breakpoints at once, or add `sum` to the **Watches** panel to track it without switching back to Locals.
+
+![example-debugger](/static/img/example-debugger.png)
