@@ -131,11 +131,11 @@ To add a new entry, click the empty row at the bottom of the panel (showing **En
 
 Values in the Watches panel are refreshed automatically after each activity executes while debugging. Use **Delete** to remove the selected entry, **Clear** to remove every entry at once, or **Refresh** to re-evaluate all watched expressions.
 
-##  Example: Debugging a Sample Workflow
+## Example: Debugging a Sample Workflow
 
 This example walks through debugging a simple **Sequence** that assigns two numbers, sums them, then branches on whether the sum is greater than 10.
 
-#### The Workflow
+### The Workflow
 
 | # | Activity | Details |
 | --- | --- | --- |
