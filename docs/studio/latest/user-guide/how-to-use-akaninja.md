@@ -1,40 +1,40 @@
 ---
-id: how-to-use-ask-ai
-title: How to use Ask AI Chatbot
-sidebar_label: How to use Ask AI Chatbot
+id: how-to-use-akaninja
+title: How to use AkaNinja Chatbot
+sidebar_label: How to use AkaNinja Chatbot
 sidebar_position: 6
-description: Chat with Ask AI in akaBot Studio to get help with RPA development, debug errors, explain logic
+description: Chat with AkaNinja in akaBot Studio to get help with RPA development, debug errors, explain logic
 displayed_sidebar: studioSidebar
 ---
 
 # About
 
-**Ask AI** is an intelligent, conversational, and context-aware assistant integrated directly into **akaBot Studio**. Serving as a co-pilot for RPA developers, Ask AI allows you to communicate using natural language to explain workflow logic, configure activities, troubleshoot errors, and write expressions, facilitating a faster and smoother automation design process.
+**AkaNinja** is an intelligent, conversational, and context-aware assistant integrated directly into **akaBot Studio**. Serving as a co-pilot for RPA developers, AkaNinja allows you to communicate using natural language to explain workflow logic, configure activities, troubleshoot errors, and write expressions, facilitating a faster and smoother automation design process.
 
 ## Capabilities
 
-Regardless of the specific workflow or activity you are building, Ask AI provides key developer-focused capabilities:
+Regardless of the specific workflow or activity you are building, AkaNinja provides key developer-focused capabilities:
 
-* **Context-Aware Assistance**: Ask AI doesn't just answer general questions; it understands the context of your current project, variables, arguments, selected activities, or error outputs to provide tailored solutions.
+* **Context-Aware Assistance**: AkaNinja doesn't just answer general questions; it understands the context of your current project, variables, arguments, selected activities, or error outputs to provide tailored solutions.
 * **Workflow Design Guidance**: Get instant recommendations on how to structure your automation processes, including which activities to use and how to chain them for specific tasks.
 * **Activity Explanation**: Learn about akaBot activities, their properties, input/output requirements, and how to configure them.
-* **Error Troubleshooting & Debugging**: Provide logs or error messages, and Ask AI will analyze the root cause and guide you through the precise steps to resolve the issue.
+* **Error Troubleshooting & Debugging**: Provide logs or error messages, and AkaNinja will analyze the root cause and guide you through the precise steps to resolve the issue.
 * **Expression Generation**: Generate VB.Net or C# expressions (e.g., string manipulation, LINQ, date formatting) tailored to your variables and data types.
 
 ## User Interface (UI) Overview
 
-The **Ask AI** panel is docked on the right-hand side of akaBot Studio, sharing the pane area with **Properties**, **Outline**, and **Locals**.
+The **AkaNinja** panel is docked on the right-hand side of akaBot Studio, sharing the pane area with **Properties**, **Outline**, and **Locals**.
 
-![Ask AI Pane](/static/img/ask-ai.png)
+![AkaNinja Pane](/static/img/ask-ai.png)
 
 ### UI Components Reference
 
-1. **Ask AI Tab**: Click this tab to open or toggle the Ask AI conversational panel.
-2. **Header & Quota Indicator**: Displays the feature name and your daily usage status (e.g., `Daily usage: 1/15 prompts used`). Ask AI has a default daily quota of 15 prompts.
+1. **AkaNinja Tab**: Click this tab to open or toggle the AkaNinja conversational panel.
+2. **Header & Quota Indicator**: Displays the feature name and your daily usage status (e.g., `Daily usage: 1/15 prompts used`). AkaNinja has a default daily quota of 15 prompts.
 3. **Chat Area / Conversation History**: Displays initial greeting, suggested prompt templates, and the ongoing dialogue thread.
 4. **Input Field**: The text box where you type your questions, instructions, or prompts.
 5. **Context Tag Menu**: Triggered automatically when you type `@` in the input field. It lets you link specific context elements from your active project.
-6. **Send Button**: Transmits your prompt and active context to the Ask AI service.
+6. **Send Button**: Transmits your prompt and active context to the AkaNinja service.
 
 ### Context Tags Reference (`@`)
 
@@ -50,10 +50,10 @@ Using context tags ensures the AI receives precise data. You can reference the f
 
 ## Step-by-Step Guide
 
-Follow these steps to interact with Ask AI during your automation development:
+Follow these steps to interact with AkaNinja during your automation development:
 
 ### Step 1: Open the Panel
-Click on the **Ask AI** tab located in the bottom-right panel of akaBot Studio to open the chat interface.
+Click on the **AkaNinja** tab located in the bottom-right panel of akaBot Studio to open the chat interface.
 
 ### Step 2: Formulate Your Query
 Type your prompt in the input field. To make your request context-aware:
@@ -62,7 +62,7 @@ Type your prompt in the input field. To make your request context-aware:
 3. Continue typing your instruction in natural language.
 
 ### Step 3: Send the Prompt
-Click the **Send** button or press **Enter**. Ask AI will process your question, inspect the attached context, and generate a response.
+Click the **Send** button or press **Enter**. AkaNinja will process your question, inspect the attached context, and generate a response.
 
 ### Step 4: Review and Implement
 Review the suggestions, steps, or code blocks generated by the AI:
@@ -71,7 +71,7 @@ Review the suggestions, steps, or code blocks generated by the AI:
 
 ## Usage Examples
 
-Here are typical scenarios showcasing how to use Ask AI to streamline your RPA tasks.
+Here are typical scenarios showcasing how to use AkaNinja to streamline your RPA tasks.
 
 ### Troubleshooting an Error
 
@@ -79,10 +79,10 @@ When a workflow execution fails, you can leverage the logs in the Output panel t
 
 * **Scenario**: A *Read Range* activity fails during execution because the file is already open in Protected View
 * **Step 1**: Click and select the failing *Read Range* activity in your Designer panel.
-* **Step 2**: Open the **Ask AI** panel.
+* **Step 2**: Open the **AkaNinja** panel.
 * **Step 3**: Type the following prompt:
   > "`@output @activity` How do I fix the error shown for my selected activity?"
-* **Step 4**: Click **Send**. Ask AI reads the active error message from the `@output` tag (e.g., `IOException: The process cannot access the file because it is being used by another process`) and identifies the properties of the `@output` activity.
+* **Step 4**: Click **Send**. AkaNinja reads the active error message from the `@output` tag (e.g., `IOException: The process cannot access the file because it is being used by another process`) and identifies the properties of the `@output` activity.
 * **Step 5**: Review and apply the solution provided by the AI:
 ```markdown
 To fix the error shown for your selected activity, you need to handle the error that occurs when the Excel file is already open in Protected View. 
@@ -101,12 +101,12 @@ Alternatively, you can also use the "Try Catch" activity to catch and handle the
 
 ### Configuring an Activity
 
-Ask AI can help you configure properties and write required expressions for specific activities.
+AkaNinja can help you configure properties and write required expressions for specific activities.
 
 * **Scenario**: You want to deserialize a JSON response string into a JSON object using the *Deserialize JSON* activity.
 * **Step 1**: Add and select the *Deserialize JSON* activity in the Designer.
 * **Step 2**: In the Variables panel, ensure you have a string variable for the raw input (e.g., `str_jsonInput`) and a variable to store the result (e.g., `jo_parsedData`).
-* **Step 3**: Open the **Ask AI** panel and type:
+* **Step 3**: Open the **AkaNinja** panel and type:
   > "@activity @variable Explain how to configure my selected activity to parse `str_jsonInput` and store the result in `jo_parsedData`"
 * **Step 4**: Click **Send**.
 * **Step 5**: Review the AI response and configure the properties as guided:
@@ -132,7 +132,3 @@ After configuring these properties, the Deserialize Json <T> activity should par
 ```
 
 ![How to use activities](/static/img/how-to-use-activities-ask-ai.png)
-
-## Troubleshooting
-
-If you encounter network connection issues or errors when using the Ask AI service, refer to the [Troubleshoot Ask AI](../troubleshoot/troubleshoot-ask-ai.md) guide.
