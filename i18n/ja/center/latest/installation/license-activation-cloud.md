@@ -84,7 +84,7 @@ displayed_sidebar: centerSidebar
 
 ![Activation success on akaBot Studio](/static/img/image-20260528135225-19.png)
 
-## **3. akaBot Agentの有効化**
+## **3. akaBot Agentの有効化と接続**
 
 > [!IMPORTANT]
 > akaBot AgentをakaBot Center Cloudにセットアップするには、**2つの独立した必須ステップ**が必要です：

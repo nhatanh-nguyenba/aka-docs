@@ -83,7 +83,7 @@ To activate the license on the target workstation running **akaBot Studio**, fol
 
 ![Activation success on akaBot Studio](/static/img/image-20260528135225-19.png)
 
-## **3. Activate akaBot Agent**
+## **3. Activate & Connect akaBot Agent**
 
 > [!IMPORTANT]
 > Setting up akaBot Agent with akaBot Center Cloud requires **two separate, mandatory steps**:
