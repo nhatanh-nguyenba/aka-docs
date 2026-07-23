@@ -81,19 +81,21 @@ RPAタスクを効率化するためにAkaNinjaを使用する代表的なシナ
 * **ステップ 1**: デザイナー（Designer）パネルで失敗している *Read Range* アクティビティをクリックして選択します。
 * **ステップ 2**: **AkaNinja** パネルを開きます。
 * **ステップ 3**: 次のプロンプトを入力します。
-  > "`@output @activity` How do I fix the error shown in for my selected activity?"
+  > "`@output @activity` How do I fix the error shown for my selected activity?"
 * **ステップ 4**: **Send**（送信）をクリックします。AkaNinjaが `@output` タグからアクティブなエラーメッセージ（例：`IOException: The process cannot access the file because it is being used by another process`）を読み取り、選択された `@activity` のプロパティを識別します。
 * **ステップ 5**: AIから提供された解決策を確認して適用します。
 ```markdown
-選択したアクティビティに表示されているエラーを修正するには、Excelファイルがすでに保護されたビュー（Protected View）で開かれているときに発生するエラーを処理する必要があります。
+このエラーは、アクティビティによって使用されているファイルが別のプロセスによってロックされていることを意味します。以下をお試しください。
 
-Excel Application Scopeアクティビティにエラーハンドラーを追加して、この例外をキャッチして処理できます。
+1. Excel、Word、PDF リーダー、画像ビューアー、またはその他のアプリケーションでファイルを閉じます。
+2. 同一ファイルにアクセスする可能性のある、ワークフローの重複実行や並行実行を停止します。並行する分岐で同じファイルパスを使用しないようにしてください。
+3. EXCEL.EXE、WINWORD.EXE、または別のロボット実行などのバックグラウンドプロセスを確認し、不要な場合は終了します。
+4. ファイルを上書きする代わりに、実行ごとに一意の出力ファイル名を使用します（例：タイムスタンプやトランザクション ID を含める）。
+5. 次のアクティビティがファイルの読み取り、移動、名前変更、または削除を行う前に、前のアクティビティによる処理が完了し解放されていることを確認します。ワークフローでストリームやカスタムコードを使用している場合は、最初にそれらをクローズ/解放（dispose）してください。
+6. 他のアプリケーションがファイルを解放するまでに時間が必要な場合は、エラーが発生しているアクティビティの前で、短い待機（Delay）や再試行（Retry）を追加します。
+7. ファイルパスを確認し、ロボットアカウントがそのフォルダーへのアクセス権を持っていることを確認します。ファイルがネットワーク共有や同期フォルダー上にある場合は、ローカルの一時フォルダーにコピーしてから処理を行ってください。
 
-これを行うには、アクティビティを右クリックし、「エラー処理（Error Handling）」>「エラーバウンダリの追加（Add Error Boundary）」を選択して、アクティビティにエラーハンドラーを追加します。
-
-その後、「ログメッセージ（Log Message）」アクティビティを追加してエラーメッセージを記録するか、「スロー（Throw）」アクティビティを追加してカスタムエラーをスローするなど、エラーを処理するアクティビティを追加できます。
-
-あるいは、「トライキャッチ（Try Catch）」アクティビティを使用して例外をキャッチし、処理することもできます。
+問題が解決しない場合は、Windows タスクマネージャーまたはリソースモニターを使用してファイルを保持しているアプリケーションを特定し、そのプロセスを終了するか、ファイルが共有されないようにワークフローを変更してください。
 ```
 
 ![Fix an error example](/static/img/fix-an-error-ask-ai.png)
@@ -107,28 +109,39 @@ AkaNinjaは、特定のアクティビティのプロパティ構成や必要な
 * **ステップ 1**: デザイナー（Designer）で *Deserialize JSON* アクティビティを追加し、選択します。
 * **ステップ 2**: Variables パネルで、生の入力用の文字列変数（例：`str_jsonInput`）と、結果を格納する変数（例：`jo_parsedData`）が作成されていることを確認します。
 * **ステップ 3**: **AkaNinja** パネルを開き、以下を入力します。
-  > "@activity @variable Explain how to configure my selected  to parse `str_jsonInput` and store the result in `jo_parsedData`"
+  > "@activity @variable Explain how to configure my selected activity to parse `str_jsonInput` and store the result in `jo_parsedData`"
 * **ステップ 4**: **Send**（送信）をクリックします。
 * **ステップ 5**: AIの回答を確認し、ガイダンスに従ってプロパティを設定します。
 ```markdown
-選択した Deserialize Json <T> アクティビティを構成して str_jsonInput をパースし、結果を jo_parsedData に格納するには、次の手順に従います。
+## Deserialize JSON <T>
 
-1. JSON String プロパティに、変数 str_jsonInput の値を入力します。JSONはインデントなしでダブルクォーテーションで囲み、配列内の各文字列はシングルクォーテーションで記述されていることを確認してください。たとえば、str_jsonInput に文字列 {'Name': 'Maria'} が含まれている場合は、{"Name": 'Maria'} として入力します。
+選択された項目は DeserializeJson<T> で、ここでは T = JObject として構成されています。JSON 文字列を JSON オブジェクト (JObject) にデシリアライズします。
 
-2. Misc セクションで、このアクティビティのデータをログに記録するために Public チェックボックスをオンにします。
+## アクティビティ本体
 
-3. 今回はジェネリック型の System.String を使用しているため、TypeArgument ドロップダウンボックスは関係ありません。
+デシリアライズする JSON コンテンツを使用して、必須の JSON String フィールドを構成します。ドキュメントには以下のように規定されています。
 
-4. Deserialize Json <T> アクティビティの出力は変数 jo_parsedData に格納されます。
+- 値は String（文字列）です。
+- JSON はインデントなしで記述する必要があります。
+- JSON はダブルクォーテーションで囲む必要があります。
+- 配列内の各文字列はシングルクォーテーションを使用する必要があります。
 
-構成例は以下のようになります。
+ドキュメントの例:
+  {'Name': 'Maria'}
 
-- JSON String (String): {"Name": 'Maria'}
-- Public (Checkbox): オン (Checked)
-- Display Name (String): Deserialize Json <T>
-- TypeArgument (Dropdown box): System.String (デフォルトで選択)
+JSON を直接入力するか、JSON を含む文字列の式または変数を提供できます。
 
-これらのプロパティを構成すると、Deserialize Json <T> activity は str_jsonInput 内のJSON文字列をパースし、結果を jo_parsedData に格納します。
+ドキュメント化されたプロパティ
+
+## Input（入力）
+
+- JsonString (InArgument<String>) — デシリアライズする JSON 文字列。これはアクティビティ本体で JSON String として指定された値と同じです。
+
+## Output（出力）
+
+- JsonObject (OutArgument<T>) — デシリアライズされた結果。選択された項目では T が JObject であるため、結果の JSON オブジェクトを後でワークフローで使用する必要がある場合は、この出力を JObject 変数に構成します。
+
+この選択項目には、他にドキュメント化されたアクティビティのアクションやプロパティはありません。
 ```
 
 ![How to use activities](/static/img/how-to-use-activities-ask-ai.png)

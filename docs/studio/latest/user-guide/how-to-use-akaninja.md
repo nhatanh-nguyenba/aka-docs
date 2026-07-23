@@ -85,15 +85,17 @@ When a workflow execution fails, you can leverage the logs in the Output panel t
 * **Step 4**: Click **Send**. AkaNinja reads the active error message from the `@output` tag (e.g., `IOException: The process cannot access the file because it is being used by another process`) and identifies the properties of the `@output` activity.
 * **Step 5**: Review and apply the solution provided by the AI:
 ```markdown
-To fix the error shown for your selected activity, you need to handle the error that occurs when the Excel file is already open in Protected View. 
+This error means the file used by the activity is locked by another process. Try the following:
 
-You can add an error handler to the Excel Application Scope activity to catch and handle this exception. 
+1. Close the file in Excel, Word, PDF readers, image viewers, or any other application.
+2. Stop duplicate or parallel executions of the workflow that may access the same file. Avoid using the same file path in simultaneous branches.
+3. Check for background processes such as EXCEL.EXE, WINWORD.EXE, or another bot run, and close them if they are no longer needed.
+4. Use a unique output filename for each run—for example, include a timestamp or transaction ID—instead of overwriting the same file.
+5. Ensure previous file activities are completed and disposed before the next activity reads, moves, renames, or deletes the file. If the workflow uses streams or custom code, close/dispose them first.
+6. Add a short retry or delay before the failing activity if another application needs time to release the file.
+7. Check the file path and confirm that the robot account has access to the folder. If the file is on a network or synchronized folder, copy it to a local temporary folder and process it there.
 
-To do this, you can add an error handler to the activity by right-clicking on the activity and selecting "Error Handling" > "Add Error Boundary". 
-
-Then, you can add an activity to handle the error, such as a "Log Message" activity to log the error message, or a "Throw" activity to throw a custom error.
-
-Alternatively, you can also use the "Try Catch" activity to catch and handle the exception.
+If the issue continues, identify which application is holding the file using Windows Task Manager or Resource Monitor, then close that process or change the workflow so it does not share the file.
 ```
 
 ![Fix an error example](/static/img/fix-an-error-ask-ai.png)
@@ -111,24 +113,35 @@ AkaNinja can help you configure properties and write required expressions for sp
 * **Step 4**: Click **Send**.
 * **Step 5**: Review the AI response and configure the properties as guided:
 ```markdown
-To configure the selected Deserialize Json <T> activity to parse str_jsonInput and store the result in jo_parsedData, follow these steps:
+## Deserialize JSON <T>
 
-1. In the JSON String property, enter the value of str_jsonInput variable. Ensure that the JSON is written without indents and between double quotes, and each string within the array is written with single quotes. For example, if str_jsonInput contains the string {'Name': 'Maria'}, enter it as {"Name": 'Maria'}.
+The selected item is DeserializeJson<T>, configured here with T = JObject. It deserializes a JSON string into a JSON object (JObject).
 
-2. In the Misc section, check the Public checkbox to log the data of this activity.
+## Activity body
 
-3. The TypeArgument dropdown box is not relevant in this case since we are using the generic type System.String.
+Configure the mandatory JSON String field with the JSON content to deserialize. The documentation specifies that:
 
-4. The output of the Deserialize Json <T> activity will be stored in the jo_parsedData variable. 
+- The value is a String.
+- The JSON should be written without indents.
+- The JSON should be enclosed in double quotes.
+- Each string inside an array should use single quotes.
 
-Here is an example of how the configuration should look like:
+Documented example:
+  {'Name': 'Maria'}
 
-- JSON String (String): {"Name": 'Maria'}
-- Public (Checkbox): Checked
-- Display Name (String): Deserialize Json <T>
-- TypeArgument (Dropdown box): System.String (selected by default)
+You can enter the JSON directly or provide a string expression/variable containing it.
 
-After configuring these properties, the Deserialize Json <T> activity should parse the JSON string in str_jsonInput and store the result in jo_parsedData.
+Documented properties
+
+## Input
+
+- JsonString (InArgument<String>) — The JSON string to deserialize. This is the same value supplied in the activity body as JSON String.
+
+## Output
+
+- JsonObject (OutArgument<T>) — The deserialized result. For your selected item, T is JObject, so configure this output to a JObject variable if you need to use the resulting JSON object later in the workflow.
+
+No other documented activity actions or properties are available for this selected item.
 ```
 
 ![How to use activities](/static/img/how-to-use-activities-ask-ai.png)
